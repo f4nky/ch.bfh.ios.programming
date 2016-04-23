@@ -7,24 +7,24 @@ from rest_framework import serializers
 class PeriodSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Period
-        field = ('name')
+        fields = ('id', 'name')
 
 class MemberTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = MemberType
-        field = ('name')
+        fields = ('id', 'name')
 
 class MemberSerializer(serializers.HyperlinkedModelSerializer):
     member_type = MemberTypeSerializer()
     
     class Meta:
         model = Member
-        fields = ('first_name', 'last_name', 'birth_date', 'member_type')
+        fields = ('id', 'first_name', 'last_name', 'birth_date', 'member_type')
         
 class EventTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EventType
-        field = ('name')
+        fields = ('id', 'name')
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     period = PeriodSerializer()
@@ -32,7 +32,7 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
         model = Event
-        fields = ('date', 'description', 'period', 'event_type')
+        fields = ('id', 'date', 'description', 'period', 'event_type')
         
 class AttendanceSerializer(serializers.HyperlinkedModelSerializer):
     event = EventSerializer()
@@ -40,4 +40,4 @@ class AttendanceSerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
         model = Attendance
-        fields = ('status', 'event', 'member')
+        fields = ('id', 'status', 'event', 'member')
