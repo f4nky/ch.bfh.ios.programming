@@ -1,7 +1,13 @@
+from api.models import Period
 from api.models import MemberType, Member
 from api.models import EventType, Event
 from api.models import Attendance
 from rest_framework import serializers
+
+class PeriodSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Period
+        field = ('name')
 
 class MemberTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -21,11 +27,12 @@ class EventTypeSerializer(serializers.HyperlinkedModelSerializer):
         field = ('name')
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
+    period = PeriodSerializer()
     event_type = EventTypeSerializer()
     
     class Meta:
         model = Event
-        fields = ('date', 'description', 'event_type')
+        fields = ('date', 'description', 'period', 'event_type')
         
 class AttendanceSerializer(serializers.HyperlinkedModelSerializer):
     event = EventSerializer()

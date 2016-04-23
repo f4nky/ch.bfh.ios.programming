@@ -2,6 +2,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+class Period(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
+
 class MemberType(models.Model):
     name = models.CharField(max_length=100)
     
@@ -24,6 +30,7 @@ class Member(models.Model):
         return self.first_name + ' ' + self.last_name
 
 class Event(models.Model):
+    period = models.ForeignKey(Period, on_delete=models.CASCADE, null=True)
     event_type = models.ForeignKey(EventType, on_delete=models.SET_NULL, null=True)
     date = models.DateField()
     description = models.CharField(max_length=1024, blank=True, null=True)

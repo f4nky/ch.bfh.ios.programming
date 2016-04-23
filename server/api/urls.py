@@ -3,6 +3,7 @@ from rest_framework import routers
 from . import views
 
 router = routers.SimpleRouter()
+router.register(r'periods', views.PeriodViewSet)
 router.register(r'member-types', views.MemberTypeViewSet)
 router.register(r'members', views.MemberViewSet)
 router.register(r'event-types', views.EventTypeViewSet)
