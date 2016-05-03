@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B53BFCD91CD949FD00AF6912 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCD81CD949FD00AF6912 /* Member.swift */; };
 		B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */; };
 		B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */; };
 		B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B53BFCD81CD949FD00AF6912 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		B5E54D4F1CAB1CE200E00F8C /* attendanceCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attendanceCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B53BFCD71CD948C600AF6912 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B53BFCD81CD949FD00AF6912 /* Member.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B5E54D461CAB1CE200E00F8C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		B5E54D511CAB1CE200E00F8C /* attendanceCheck */ = {
 			isa = PBXGroup;
 			children = (
+				B53BFCD71CD948C600AF6912 /* Models */,
 				B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */,
 				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
 				B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */,
@@ -203,6 +214,7 @@
 				B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */,
 				B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
+				B53BFCD91CD949FD00AF6912 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +406,7 @@
 				B5E54D701CAB1CE200E00F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5E54D711CAB1CE200E00F8C /* Build configuration list for PBXNativeTarget "attendanceCheckTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +415,7 @@
 				B5E54D731CAB1CE200E00F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
