@@ -10,11 +10,20 @@ import UIKit
 
 class MasterViewController: UITableViewController {
 
+    @IBOutlet var memberTableView: UITableView!
+    
     var detailViewController: DetailViewController? = nil
-    var members = [
-        Member(id: 1, firstName: "John", lastName: "Doe"),
-        Member(id: 2, firstName: "Max", lastName: "Mustermann"),
-        Member(id: 3, firstName: "Felix", lastName: "Muster")
+    var manager: RestManager! = RestManager()
+    var members = [Member]()
+//    var members = [
+//        Member(id: 1, firstName: "John", lastName: "Doe", birthDate: nil),
+//        Member(id: 2, firstName: "Max", lastName: "Mustermann", birthDate: nil),
+//        Member(id: 3, firstName: "Felix", lastName: "Muster", birthDate: nil)
+//    ]
+    
+    var events = [
+        Event(id: 1, date: "2016-05-06", description: ""),
+        Event(id: 2, date: "2016-05-09", description: "")
     ]
     
     override func viewDidLoad() {
@@ -33,6 +42,11 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
+        self.manager.getMembers() {members in
+            //print(members)
+            self.members = members
+            self.memberTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +88,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let member = members[indexPath.row]
-        cell.textLabel!.text = member.lastName + " " + member.firstName
+        cell.textLabel!.text = member.firstName + " " + member.lastName
         return cell
     }
 
@@ -85,7 +99,7 @@ class MasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            members.removeAtIndex(indexPath.row)
+            events.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.

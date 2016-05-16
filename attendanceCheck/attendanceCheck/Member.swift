@@ -12,5 +12,11 @@ struct Member {
     let id:Int
     let firstName:String
     let lastName:String
-    //var birthDate:NSDate
+    //var birthDate:NSDate?
+    
+    init(dictionary: [String: AnyObject]) {
+        id = dictionary["id"] as? Int ?? -99
+        firstName = dictionary["first_name"] as? String ?? ""
+        lastName = dictionary["last_name"] as? String ?? ""
+    }
 }
