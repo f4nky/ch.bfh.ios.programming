@@ -34,7 +34,7 @@ class RestManager: NSURLSessionDataTask {
         task.resume()
     }
     
-    func getMembers(completion: [Member] -> Void) {
+    /*func getMembers(completion: [Member] -> Void) {
         self.performRequest("members/", method: "GET", body: nil) {
             (responseObject, response, error) in
             let memberList = responseObject as? [[String: AnyObject]]
@@ -44,6 +44,6 @@ class RestManager: NSURLSessionDataTask {
             }
             completion(members)
         }
-    }
+    }*/
 
 }
