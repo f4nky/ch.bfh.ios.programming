@@ -85,13 +85,30 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		B5BB159C1CEB681D00D242BC /* TableCells */ = {
+		B53F27571CEBA35400C09AE4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
+				B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		B53F27581CEBA37500C09AE4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B53F27591CEBA37B00C09AE4 /* Views */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		B53F27591CEBA37B00C09AE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */,
 				B53F27531CEB74E000C09AE4 /* MemberCell.swift */,
 			);
-			name = TableCells;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B5E54D461CAB1CE200E00F8C = {
@@ -115,12 +132,11 @@
 		B5E54D511CAB1CE200E00F8C /* attendanceCheck */ = {
 			isa = PBXGroup;
 			children = (
-				B5BB159C1CEB681D00D242BC /* TableCells */,
+				B53F27581CEBA37500C09AE4 /* Common */,
 				B53BFCDC1CDA0DAA00AF6912 /* Data */,
 				B53BFCD71CD948C600AF6912 /* Models */,
+				B53F27571CEBA35400C09AE4 /* Scenes */,
 				B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */,
-				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
-				B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */,
 				B5E54D581CAB1CE200E00F8C /* Main.storyboard */,
 				B5E54D5B1CAB1CE200E00F8C /* Assets.xcassets */,
 				B5E54D5D1CAB1CE200E00F8C /* LaunchScreen.storyboard */,
