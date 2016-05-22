@@ -12,7 +12,7 @@ class PeriodSerializer(serializers.HyperlinkedModelSerializer):
 class MemberTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = MemberType
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'abbr')
 
 class MemberSerializer(serializers.HyperlinkedModelSerializer):
     member_type = MemberTypeSerializer()
@@ -24,7 +24,7 @@ class MemberSerializer(serializers.HyperlinkedModelSerializer):
 class EventTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EventType
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'abbr')
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
     period = PeriodSerializer()
