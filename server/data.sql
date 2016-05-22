@@ -12,10 +12,10 @@ INSERT INTO api_membertype (id, name) VALUES
 	(1, 'TrainerIn'),
 	(2, 'SpielerIn');
 
-INSERT INTO api_eventtype (id, name) VALUES
-	(1, 'Training'),
-	(2, 'Match'),
-	(3, 'Turnier');
+INSERT INTO api_eventtype (id, name, abbr) VALUES
+	(1, 'Training', 'T'),
+	(2, 'Match', 'M'),
+	(3, 'Turnier', 'Tu');
 
 INSERT INTO api_member (id, first_name, last_name, birth_date, member_type_id) VALUES
 	(1, 'Michael', 'Fankhauser', '1985-11-04', 1),
