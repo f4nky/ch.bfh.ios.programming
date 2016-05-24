@@ -2,22 +2,34 @@
 //  Member.swift
 //  attendanceCheck
 //
-//  Created by Fanky on 03.05.16.
+//  Created by Fanky on 25.05.16.
 //  Copyright © 2016 Fanky. All rights reserved.
 //
 
 import Foundation
 
-struct Member {
-    let id:Int
-    let firstName:String
-    let lastName:String
-    let birthDate:NSDate?
+class Member {
+    var firstName: String?
+    var lastName: String?
+    var birthDate: NSDate?
     
-    /*init(dictionary: [String: AnyObject]) {
-        id = dictionary["id"] as? Int ?? -99
-        firstName = dictionary["first_name"] as? String ?? ""
-        lastName = dictionary["last_name"] as? String ?? ""
-        birthDate = dictionary["birth_date"] as? NSDate ?? nil
-    }*/
+    init(firstName: String?, lastName: String?, birthDate: NSDate?) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.birthDate = birthDate
+    }
+    
+    init(memberData: [String: AnyObject]) {
+        if let firstName = memberData["first_name"] as? String {
+            self.firstName = firstName
+        }
+        if let lastName = memberData["last_name"] as? String {
+            self.lastName = lastName
+        }
+        if let birthDate = memberData["birth_Date"] as? String {
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            self.birthDate = dateFormatter.dateFromString(birthDate)!
+        }
+    }
 }

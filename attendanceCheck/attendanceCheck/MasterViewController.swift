@@ -10,20 +10,21 @@ import UIKit
 
 class MasterViewController: UITableViewController {
 
-    @IBOutlet var memberTableView: UITableView!
+    
+    @IBOutlet var eventTableView: UITableView!
+    
+    var sections = ["April", "Mai"]
+    var events = [[
+            Event(date: "2016-04-25", desc: "18.20 - 20.00"),
+            Event(date: "2016-04-29", desc: "18.20 - 20.00"),
+            Event(date: "2016-05-02", desc: "18.20 - 20.00")
+        ], []
+    ]
     
     var detailViewController: DetailViewController? = nil
     //var manager: RestManager! = RestManager()
     //var members = [Member]()
-    var sections = ["Trainer", "Spielerin"]
-    var members = [[
-        Member(id: 1, firstName: "Max", lastName: "Mustermann", birthDate: nil),
-        Member(id: 2, firstName: "Felix", lastName: "Muster", birthDate: nil)
-    ], [
-        Member(id: 3, firstName: "Anna", lastName: "Schweizer", birthDate: nil),
-        Member(id: 4, firstName: "Erika", lastName: "Musterfrau", birthDate: nil),
-        Member(id: 5, firstName: "Jane", lastName: "Doe", birthDate: nil)
-    ]]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +38,19 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        let nib = UINib(nibName: "vwMemberCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        let nibHeaderCell = UINib(nibName: "vwDefaultHeaderCell", bundle: nil)
+        eventTableView.registerNib(nibHeaderCell, forCellReuseIdentifier: "defaultHeaderCell")
+        
+        eventTableView.sectionHeaderHeight = 20.0
+        
+        let nibEventCell = UINib(nibName: "vwEventCell", bundle: nil)
+        eventTableView.registerNib(nibEventCell, forCellReuseIdentifier: "eventCell")
+        
+        eventTableView.delegate = self
+        eventTableView.dataSource = self
+        eventTableView.separatorInset = UIEdgeInsetsZero
+        eventTableView.layoutMargins = UIEdgeInsetsZero
+        eventTableView.rowHeight = 50.0
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -58,23 +70,17 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        //objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            /*if let indexPath = self.tableView.indexPathForSelectedRow {
-                let member = members[indexPath.row]
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let event = events[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = member
+                controller.detailItem = event
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
-            }*/
+            }
         }
     }
 
@@ -89,8 +95,16 @@ class MasterViewController: UITableViewController {
         return sections[section]
     }
 
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("defaultHeaderCell") as! DefaultHeaderCell
+        
+        headerCell.lblTitle!.text = sections[section].uppercaseString
+        
+        return headerCell
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return members[section].count
+        return events[section].count
         //return members.count
     }
 
@@ -100,28 +114,18 @@ class MasterViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: MemberCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MemberCell
-
-        let member = members[indexPath.section][indexPath.row]
-        //let member = members[indexPath.row]
-        cell.lblMemberName.text = member.firstName.uppercaseString + " " + member.lastName.uppercaseString
+        let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventCell
+        
+        let event = events[indexPath.section][indexPath.row] as Event
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EE, dd.MM.yyyy"
+        
+        cell.lblEventType!.text = "Tr"
+        cell.lblEventDate!.text = dateFormatter.stringFromDate(event.date!)
+        cell.lblEventInfo!.text = event.desc
+        
         return cell
     }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            members.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-
-
 }
 

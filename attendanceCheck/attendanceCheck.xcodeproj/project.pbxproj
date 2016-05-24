@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B53BFCD91CD949FD00AF6912 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCD81CD949FD00AF6912 /* Member.swift */; };
-		B53BFCDB1CDA07C500AF6912 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCDA1CDA07C500AF6912 /* Event.swift */; };
+		B51837981CF5016200527459 /* DefaultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837921CF5016200527459 /* DefaultHeaderCell.swift */; };
+		B51837991CF5016200527459 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837931CF5016200527459 /* EventCell.swift */; };
+		B518379A1CF5016200527459 /* MemberHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837941CF5016200527459 /* MemberHeaderCell.swift */; };
+		B518379B1CF5016200527459 /* vwDefaultHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */; };
+		B518379C1CF5016200527459 /* vwEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837961CF5016200527459 /* vwEventCell.xib */; };
+		B518379D1CF5016200527459 /* vwMemberHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837971CF5016200527459 /* vwMemberHeaderCell.xib */; };
+		B518379F1CF5064400527459 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518379E1CF5064400527459 /* Event.swift */; };
+		B51837A11CF5066400527459 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837A01CF5066400527459 /* Member.swift */; };
 		B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */; };
 		B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F27531CEB74E000C09AE4 /* MemberCell.swift */; };
 		B5ACF2FB1CEB72C4005E57FD /* vwMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */; };
@@ -32,8 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B53BFCD81CD949FD00AF6912 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		B53BFCDA1CDA07C500AF6912 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B51837921CF5016200527459 /* DefaultHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeaderCell.swift; sourceTree = "<group>"; };
+		B51837931CF5016200527459 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		B51837941CF5016200527459 /* MemberHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberHeaderCell.swift; sourceTree = "<group>"; };
+		B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwDefaultHeaderCell.xib; sourceTree = "<group>"; };
+		B51837961CF5016200527459 /* vwEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwEventCell.xib; sourceTree = "<group>"; };
+		B51837971CF5016200527459 /* vwMemberHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberHeaderCell.xib; sourceTree = "<group>"; };
+		B518379E1CF5064400527459 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B51837A01CF5066400527459 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		B53F27531CEB74E000C09AE4 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberCell.xib; sourceTree = "<group>"; };
@@ -71,18 +83,18 @@
 		B53BFCD71CD948C600AF6912 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B53BFCD81CD949FD00AF6912 /* Member.swift */,
-				B53BFCDA1CDA07C500AF6912 /* Event.swift */,
+				B518379E1CF5064400527459 /* Event.swift */,
+				B51837A01CF5066400527459 /* Member.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
 		};
-		B53BFCDC1CDA0DAA00AF6912 /* Data */ = {
+		B53BFCDC1CDA0DAA00AF6912 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
 				B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */,
 			);
-			name = Data;
+			name = Webservice;
 			sourceTree = "<group>";
 		};
 		B53F27571CEBA35400C09AE4 /* Scenes */ = {
@@ -105,8 +117,14 @@
 		B53F27591CEBA37B00C09AE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */,
+				B51837921CF5016200527459 /* DefaultHeaderCell.swift */,
+				B51837931CF5016200527459 /* EventCell.swift */,
 				B53F27531CEB74E000C09AE4 /* MemberCell.swift */,
+				B51837941CF5016200527459 /* MemberHeaderCell.swift */,
+				B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */,
+				B51837961CF5016200527459 /* vwEventCell.xib */,
+				B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */,
+				B51837971CF5016200527459 /* vwMemberHeaderCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -133,9 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				B53F27581CEBA37500C09AE4 /* Common */,
-				B53BFCDC1CDA0DAA00AF6912 /* Data */,
 				B53BFCD71CD948C600AF6912 /* Models */,
 				B53F27571CEBA35400C09AE4 /* Scenes */,
+				B53BFCDC1CDA0DAA00AF6912 /* Webservice */,
 				B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */,
 				B5E54D581CAB1CE200E00F8C /* Main.storyboard */,
 				B5E54D5B1CAB1CE200E00F8C /* Assets.xcassets */,
@@ -235,8 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B518379D1CF5016200527459 /* vwMemberHeaderCell.xib in Resources */,
 				B5E54D5F1CAB1CE200E00F8C /* LaunchScreen.storyboard in Resources */,
 				B5E54D5C1CAB1CE200E00F8C /* Assets.xcassets in Resources */,
+				B518379B1CF5016200527459 /* vwDefaultHeaderCell.xib in Resources */,
+				B518379C1CF5016200527459 /* vwEventCell.xib in Resources */,
 				B5ACF2FB1CEB72C4005E57FD /* vwMemberCell.xib in Resources */,
 				B5E54D5A1CAB1CE200E00F8C /* Main.storyboard in Resources */,
 			);
@@ -256,13 +277,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51837981CF5016200527459 /* DefaultHeaderCell.swift in Sources */,
+				B518379F1CF5064400527459 /* Event.swift in Sources */,
+				B51837991CF5016200527459 /* EventCell.swift in Sources */,
 				B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */,
 				B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
 				B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */,
 				B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */,
-				B53BFCD91CD949FD00AF6912 /* Member.swift in Sources */,
-				B53BFCDB1CDA07C500AF6912 /* Event.swift in Sources */,
+				B518379A1CF5016200527459 /* MemberHeaderCell.swift in Sources */,
+				B51837A11CF5066400527459 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
