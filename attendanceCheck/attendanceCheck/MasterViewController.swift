@@ -13,13 +13,14 @@ class MasterViewController: UITableViewController {
     
     @IBOutlet var eventTableView: UITableView!
     
-    var sections = ["April", "Mai"]
-    var events = [[
+    var sections = ["April"]
+    /*var events = [[
             Event(date: "2016-04-25", desc: "18.20 - 20.00"),
             Event(date: "2016-04-29", desc: "18.20 - 20.00"),
             Event(date: "2016-05-02", desc: "18.20 - 20.00")
         ], []
-    ]
+    ]*/
+    var events = [Event]()
     
     var detailViewController: DetailViewController? = nil
     //var manager: RestManager! = RestManager()
@@ -51,6 +52,13 @@ class MasterViewController: UITableViewController {
         eventTableView.separatorInset = UIEdgeInsetsZero
         eventTableView.layoutMargins = UIEdgeInsetsZero
         eventTableView.rowHeight = 50.0
+        
+        EventApi.getEvents() {events in
+            self.events = events
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -87,11 +95,11 @@ class MasterViewController: UITableViewController {
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return sections.count
-        //return 1
+        //return sections.count
+        return 1
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    /*override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
     }
 
@@ -101,11 +109,11 @@ class MasterViewController: UITableViewController {
         headerCell.lblTitle!.text = sections[section].uppercaseString
         
         return headerCell
-    }
+    }*/
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events[section].count
-        //return members.count
+        //return events[section].count
+        return events.count
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -116,7 +124,8 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventCell
         
-        let event = events[indexPath.section][indexPath.row] as Event
+        //let event = events[indexPath.section][indexPath.row] as Event
+        let event = events[indexPath.row] as Event
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EE, dd.MM.yyyy"

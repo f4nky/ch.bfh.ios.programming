@@ -15,6 +15,7 @@
 		B518379D1CF5016200527459 /* vwMemberHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837971CF5016200527459 /* vwMemberHeaderCell.xib */; };
 		B518379F1CF5064400527459 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518379E1CF5064400527459 /* Event.swift */; };
 		B51837A11CF5066400527459 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837A01CF5066400527459 /* Member.swift */; };
+		B51837A31CF50F2100527459 /* EventApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837A21CF50F2100527459 /* EventApi.swift */; };
 		B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */; };
 		B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F27531CEB74E000C09AE4 /* MemberCell.swift */; };
 		B5ACF2FB1CEB72C4005E57FD /* vwMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */; };
@@ -46,6 +47,7 @@
 		B51837971CF5016200527459 /* vwMemberHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberHeaderCell.xib; sourceTree = "<group>"; };
 		B518379E1CF5064400527459 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B51837A01CF5066400527459 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		B51837A21CF50F2100527459 /* EventApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventApi.swift; sourceTree = "<group>"; };
 		B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		B53F27531CEB74E000C09AE4 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberCell.xib; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		B53BFCDC1CDA0DAA00AF6912 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
+				B51837A21CF50F2100527459 /* EventApi.swift */,
 				B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */,
 			);
 			name = Webservice;
@@ -282,6 +285,7 @@
 				B51837991CF5016200527459 /* EventCell.swift in Sources */,
 				B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */,
 				B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */,
+				B51837A31CF50F2100527459 /* EventApi.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
 				B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */,
 				B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */,

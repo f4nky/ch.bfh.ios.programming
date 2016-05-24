@@ -12,7 +12,7 @@ class RestManager: NSURLSessionDataTask {
     
     static let apiBaseUrl: String = "http://46.101.106.41/api/v1/"
     
-    func performRequest(urlPart: String, method: String, body: NSObject?, completionHandler: (AnyObject?, NSURLResponse?, NSError?) -> Void) {
+    static func performRequest(urlPart: String, method: String, body: NSObject?, completionHandler: (AnyObject?, NSURLResponse?, NSError?) -> Void) {
         
         print(RestManager.apiBaseUrl + urlPart)
         
@@ -33,17 +33,5 @@ class RestManager: NSURLSessionDataTask {
         }
         task.resume()
     }
-    
-    /*func getMembers(completion: [Member] -> Void) {
-        self.performRequest("members/", method: "GET", body: nil) {
-            (responseObject, response, error) in
-            let memberList = responseObject as? [[String: AnyObject]]
-            var members = [Member]()
-            for member in memberList! {
-                members.append(Member(dictionary: member))
-            }
-            completion(members)
-        }
-    }*/
 
 }
