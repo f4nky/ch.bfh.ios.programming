@@ -8,7 +8,7 @@ router.register(r'member-types', views.MemberTypeViewSet)
 router.register(r'members', views.MemberViewSet)
 router.register(r'event-types', views.EventTypeViewSet)
 router.register(r'events', views.EventViewSet)
-router.register(r'attendance', views.AttendanceViewSet)
+router.register(r'attendances', views.AttendanceViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

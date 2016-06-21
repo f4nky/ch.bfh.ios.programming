@@ -34,6 +34,7 @@ class MasterViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -62,7 +63,6 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
         /*self.manager.getMembers() {members in
             //print(members)
@@ -80,7 +80,10 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Segues
 
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(segue.identifier)
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let event = events[indexPath.row]
@@ -97,6 +100,12 @@ class MasterViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         //return sections.count
         return 1
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("showDetail", sender: cell)
     }
     
     /*override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

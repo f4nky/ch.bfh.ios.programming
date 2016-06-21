@@ -26,6 +26,8 @@
 		B5E54D5C1CAB1CE200E00F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E54D5B1CAB1CE200E00F8C /* Assets.xcassets */; };
 		B5E54D5F1CAB1CE200E00F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E54D5D1CAB1CE200E00F8C /* LaunchScreen.storyboard */; };
 		B5E54D6A1CAB1CE200E00F8C /* attendanceCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D691CAB1CE200E00F8C /* attendanceCheckTests.swift */; };
+		B5FCC1231D197C740019D22A /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */; };
+		B5FCC1271D1983B20019D22A /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1261D1983B20019D22A /* EventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		B5E54D651CAB1CE200E00F8C /* attendanceCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = attendanceCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E54D691CAB1CE200E00F8C /* attendanceCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attendanceCheckTests.swift; sourceTree = "<group>"; };
 		B5E54D6B1CAB1CE200E00F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
+		B5FCC1261D1983B20019D22A /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			children = (
 				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
 				B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */,
+				B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */,
+				B5FCC1261D1983B20019D22A /* EventController.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -284,12 +290,14 @@
 				B518379F1CF5064400527459 /* Event.swift in Sources */,
 				B51837991CF5016200527459 /* EventCell.swift in Sources */,
 				B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */,
+				B5FCC1271D1983B20019D22A /* EventController.swift in Sources */,
 				B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */,
 				B51837A31CF50F2100527459 /* EventApi.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
 				B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */,
 				B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */,
 				B518379A1CF5016200527459 /* MemberHeaderCell.swift in Sources */,
+				B5FCC1231D197C740019D22A /* GlobalSplitViewController.swift in Sources */,
 				B51837A11CF5066400527459 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
