@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="259" y="-136"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Member Controller-->
         <scene sceneID="9V5-jc-4U9">
             <objects>
-                <tableViewController id="JAc-hT-hZK" sceneMemberID="viewController">
+                <tableViewController id="JAc-hT-hZK" customClass="MemberController" customModule="attendanceCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SJ3-QK-Knv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +192,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="hPJ-bc-orw"/>
+                    <connections>
+                        <outlet property="memberTableView" destination="SJ3-QK-Knv" id="9Xz-3O-VyU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEu-n8-vse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

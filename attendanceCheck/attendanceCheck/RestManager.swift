@@ -17,9 +17,17 @@ class RestManager: NSURLSessionDataTask {
         print(RestManager.apiBaseUrl + urlPart)
         
         let url = NSURL(string: RestManager.apiBaseUrl + urlPart)!
-        let request = NSMutableURLRequest(URL: url)
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
+        let request = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = method
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        if let HTTPBody = body {
+            request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(HTTPBody, options: .PrettyPrinted)
+        }
         
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) in

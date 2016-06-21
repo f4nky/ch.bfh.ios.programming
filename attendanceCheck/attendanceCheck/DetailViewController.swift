@@ -15,12 +15,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var sections = ["Trainer", "Spielerin"]
     var members = [[
-            Member(firstName: "Max", lastName: "Mustermann", birthDate: nil),
-            Member(firstName: "Felix", lastName: "Muster", birthDate: nil)
+            Member(id: 1, firstName: "Max", lastName: "Mustermann", birthDate: nil, memberType: nil),
+            Member(id: 2, firstName: "Felix", lastName: "Muster", birthDate: nil, memberType: nil)
         ], [
-            Member(firstName: "Anna", lastName: "Schweizer", birthDate: nil),
-            Member(firstName: "Erika", lastName: "Musterfrau", birthDate: nil),
-            Member(firstName: "Jane", lastName: "Doe", birthDate: nil)
+            Member(id: 3, firstName: "Anna", lastName: "Schweizer", birthDate: nil, memberType: nil),
+            Member(id: 4, firstName: "Erika", lastName: "Musterfrau", birthDate: nil, memberType: nil),
+            Member(id: 5, firstName: "Jane", lastName: "Doe", birthDate: nil, memberType: nil)
         ]
     ]
     

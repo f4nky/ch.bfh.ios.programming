@@ -28,6 +28,9 @@
 		B5E54D6A1CAB1CE200E00F8C /* attendanceCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D691CAB1CE200E00F8C /* attendanceCheckTests.swift */; };
 		B5FCC1231D197C740019D22A /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */; };
 		B5FCC1271D1983B20019D22A /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1261D1983B20019D22A /* EventController.swift */; };
+		B5FCC1291D1988A30019D22A /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1281D1988A30019D22A /* MemberController.swift */; };
+		B5FCC12B1D198A1D0019D22A /* MemberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC12A1D198A1D0019D22A /* MemberApi.swift */; };
+		B5FCC12D1D198C6D0019D22A /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC12C1D198C6D0019D22A /* MemberType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		B5E54D6B1CAB1CE200E00F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
 		B5FCC1261D1983B20019D22A /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		B5FCC1281D1988A30019D22A /* MemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
+		B5FCC12A1D198A1D0019D22A /* MemberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberApi.swift; sourceTree = "<group>"; };
+		B5FCC12C1D198C6D0019D22A /* MemberType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 			children = (
 				B518379E1CF5064400527459 /* Event.swift */,
 				B51837A01CF5066400527459 /* Member.swift */,
+				B5FCC12C1D198C6D0019D22A /* MemberType.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -98,8 +105,9 @@
 		B53BFCDC1CDA0DAA00AF6912 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
-				B51837A21CF50F2100527459 /* EventApi.swift */,
 				B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */,
+				B51837A21CF50F2100527459 /* EventApi.swift */,
+				B5FCC12A1D198A1D0019D22A /* MemberApi.swift */,
 			);
 			name = Webservice;
 			sourceTree = "<group>";
@@ -107,10 +115,11 @@
 		B53F27571CEBA35400C09AE4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
 				B5E54D561CAB1CE200E00F8C /* DetailViewController.swift */,
-				B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */,
 				B5FCC1261D1983B20019D22A /* EventController.swift */,
+				B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */,
+				B5E54D541CAB1CE200E00F8C /* MasterViewController.swift */,
+				B5FCC1281D1988A30019D22A /* MemberController.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -286,9 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FCC12B1D198A1D0019D22A /* MemberApi.swift in Sources */,
 				B51837981CF5016200527459 /* DefaultHeaderCell.swift in Sources */,
+				B5FCC1291D1988A30019D22A /* MemberController.swift in Sources */,
 				B518379F1CF5064400527459 /* Event.swift in Sources */,
 				B51837991CF5016200527459 /* EventCell.swift in Sources */,
+				B5FCC12D1D198C6D0019D22A /* MemberType.swift in Sources */,
 				B5E54D571CAB1CE200E00F8C /* DetailViewController.swift in Sources */,
 				B5FCC1271D1983B20019D22A /* EventController.swift in Sources */,
 				B5E54D551CAB1CE200E00F8C /* MasterViewController.swift in Sources */,
