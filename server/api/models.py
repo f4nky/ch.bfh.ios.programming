@@ -1,6 +1,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.db.models.signals import post_save
+from . import signals
 
 class Period(models.Model):
     name = models.CharField(max_length=100)
@@ -38,7 +40,7 @@ class Event(models.Model):
     description = models.CharField(max_length=1024, blank=True, null=True)
     
     def __str__(self):
-        return str(self.date)
+        return str(self.date) + ' - ' + self.event_type.name
 
 class Attendance(models.Model):
     STATUSES = (
@@ -52,4 +54,7 @@ class Attendance(models.Model):
     status = models.CharField(max_length=3, choices=STATUSES)
     
     def __str__(self):
-        return str(self.id)
+        return str(self.event.date) + ' - ' + self.event.event_type.name + ' - ' + self.member.first_name + ' ' + self.member.last_name
+
+post_save.connect(signals.create_new_attendance_if_new_event, sender=Event)
+post_save.connect(signals.create_new_attendance_if_new_member, sender=Member)
