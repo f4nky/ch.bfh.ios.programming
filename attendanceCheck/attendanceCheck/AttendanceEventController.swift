@@ -20,16 +20,12 @@ class MasterViewController: UITableViewController {
             Event(date: "2016-05-02", desc: "18.20 - 20.00")
         ], []
     ]*/
-    var events = [Event]()
+    var attendances = [Attendance]()
     
     var detailViewController: DetailViewController? = nil
-    //var manager: RestManager! = RestManager()
-    //var members = [Member]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
@@ -54,8 +50,12 @@ class MasterViewController: UITableViewController {
         eventTableView.layoutMargins = UIEdgeInsetsZero
         eventTableView.rowHeight = 50.0
         
-        EventApi.getEvents() {events in
-            self.events = events
+        loadAttendanceData()
+    }
+    
+    func loadAttendanceData() {
+        AttendanceApi.getAttendances() {attendances in
+            self.attendances = attendances
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -86,7 +86,7 @@ class MasterViewController: UITableViewController {
         print(segue.identifier)
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let event = events[indexPath.row]
+                let event = attendances[indexPath.row].event
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = event
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
@@ -122,7 +122,7 @@ class MasterViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return events[section].count
-        return events.count
+        return attendances.count
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -134,7 +134,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventCell
         
         //let event = events[indexPath.section][indexPath.row] as Event
-        let event = events[indexPath.row] as Event
+        let event = attendances[indexPath.row].event! as Event
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EE, dd.MM.yyyy"

@@ -30,7 +30,11 @@ class EventController: UITableViewController {
         eventTableView.separatorInset = UIEdgeInsetsZero
         eventTableView.layoutMargins = UIEdgeInsetsZero
         eventTableView.rowHeight = 50.0
-        
+    
+        loadEventData()
+    }
+    
+    func loadEventData() {
         EventApi.getEvents() {events in
             self.events = events
             dispatch_async(dispatch_get_main_queue()) {
