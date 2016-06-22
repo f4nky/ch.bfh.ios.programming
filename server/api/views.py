@@ -7,6 +7,7 @@ from api.serializers import MemberTypeSerializer, MemberSerializer
 from api.serializers import EventTypeSerializer, EventSerializer
 from api.serializers import AttendanceSerializer
 from rest_framework import viewsets
+from datetime import datetime
 
 class PeriodViewSet(viewsets.ModelViewSet):
     queryset = Period.objects.all()
