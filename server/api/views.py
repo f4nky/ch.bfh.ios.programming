@@ -38,11 +38,9 @@ class AttendanceFilteredViewSet(viewsets.ModelViewSet):
     
     def get_queryset(self):
         queryset = Attendance.objects.all()
-        param = self.kwargs.get('eventdate', None)
+        eventdate = self.kwargs.get('eventdate', None)
         
-        if param is not None:
-            tmpDate = datetime.strptime(param, '%Y%m%d')
-            eventdate = tmpDate.strftime('%Y-%m-%d')
+        if eventdate is not None:
             queryset = queryset.filter(event__date=eventdate)
         
         return queryset
