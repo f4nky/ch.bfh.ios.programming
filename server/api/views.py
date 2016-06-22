@@ -31,3 +31,17 @@ class EventViewSet(viewsets.ModelViewSet):
 class AttendanceViewSet(viewsets.ModelViewSet):
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
+    
+class AttendanceFilteredViewSet(viewsets.ModelViewSet):
+    serializer_class = AttendanceSerializer
+    
+    def get_queryset(self):
+        queryset = Attendance.objects.all()
+        param = self.kwargs.get('eventdate', None)
+        
+        if param is not None:
+            tmpDate = datetime.strptime(param, '%Y%m%d')
+            eventdate = tmpDate.strftime('%Y-%m-%d')
+            queryset = queryset.filter(event__date=eventdate)
+        
+        return queryset
