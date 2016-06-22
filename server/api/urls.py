@@ -8,8 +8,8 @@ router.register(r'member-types', views.MemberTypeViewSet)
 router.register(r'members', views.MemberViewSet)
 router.register(r'event-types', views.EventTypeViewSet)
 router.register(r'events', views.EventViewSet)
-router.register(r'attendances/(?P<eventdate>\d+)', views.AttendanceFilteredViewSet)
-router.register(r'attendances', views.AttendanceViewSet)
+router.register(r'attendances/(?P<eventdate>\d+)', views.AttendanceFilteredViewSet, base_name='attendance-filtered')
+router.register(r'attendances', views.AttendanceViewSet, base_name='attendance'
 
 urlpatterns = [
     url(r'^', include(router.urls)),
