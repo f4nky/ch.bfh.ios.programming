@@ -17,6 +17,8 @@ class EventController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.refreshControl?.addTarget(self, action: #selector(EventController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
         let nibHeaderCell = UINib(nibName: "vwDefaultHeaderCell", bundle: nil)
         eventTableView.registerNib(nibHeaderCell, forCellReuseIdentifier: "defaultHeaderCell")
         
@@ -32,6 +34,13 @@ class EventController: UITableViewController {
         eventTableView.rowHeight = 50.0
     
         loadEventData()
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        loadEventData()
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
     func loadEventData() {

@@ -9,20 +9,9 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     
     @IBOutlet weak var memberTableView: UITableView!
 
-    //var sections = ["Trainer", "Spielerin"]
-    /*var members = [[
-            Member(id: 1, firstName: "Max", lastName: "Mustermann", birthDate: nil, memberType: nil),
-            Member(id: 2, firstName: "Felix", lastName: "Muster", birthDate: nil, memberType: nil)
-        ], [
-            Member(id: 3, firstName: "Anna", lastName: "Schweizer", birthDate: nil, memberType: nil),
-            Member(id: 4, firstName: "Erika", lastName: "Musterfrau", birthDate: nil, memberType: nil),
-            Member(id: 5, firstName: "Jane", lastName: "Doe", birthDate: nil, memberType: nil)
-        ]
-    ]*/
     var event: Event?
     var sections = [String]()
     var attendances = [[Attendance]]()
@@ -39,8 +28,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         memberTableView.sectionHeaderHeight = 20.0
         
-        let nibMemberCell = UINib(nibName: "vwMemberCell", bundle: nil)
-        memberTableView.registerNib(nibMemberCell, forCellReuseIdentifier: "memberCell")
+        let nibMemberCell = UINib(nibName: "vwMemberAttendanceCell", bundle: nil)
+        memberTableView.registerNib(nibMemberCell, forCellReuseIdentifier: "memberAttendanceCell")
         
         memberTableView.delegate = self
         memberTableView.dataSource = self
@@ -113,7 +102,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("memberCell", forIndexPath: indexPath) as! MemberCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("memberAttendanceCell", forIndexPath: indexPath) as! MemberAttendanceCell
 
         let attendance = attendances[indexPath.section][indexPath.row]
         

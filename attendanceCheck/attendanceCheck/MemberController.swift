@@ -19,8 +19,8 @@ class MemberController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nibHeaderCell = UINib(nibName: "vwMemberHeaderCell", bundle: nil)
-        memberTableView.registerNib(nibHeaderCell, forCellReuseIdentifier: "memberHeaderCell")
+        let nibHeaderCell = UINib(nibName: "vwMemberAttendanceHeaderCell", bundle: nil)
+        memberTableView.registerNib(nibHeaderCell, forCellReuseIdentifier: "memberAttendanceHeaderCell")
         
         memberTableView.sectionHeaderHeight = 20.0
         
@@ -82,7 +82,7 @@ class MemberController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("memberHeaderCell") as! MemberHeaderCell
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("memberAttendanceHeaderCell") as! MemberAttendanceHeaderCell
         
         headerCell.lblTitle!.text = sections[section].uppercaseString
         
