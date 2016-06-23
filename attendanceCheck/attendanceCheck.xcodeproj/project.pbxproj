@@ -38,6 +38,9 @@
 		B5FCC16D1D1C87680019D22A /* EventApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1691D1C87680019D22A /* EventApi.swift */; };
 		B5FCC16E1D1C87680019D22A /* MemberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC16A1D1C87680019D22A /* MemberApi.swift */; };
 		B5FCC16F1D1C87680019D22A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC16B1D1C87680019D22A /* RestManager.swift */; };
+		B5FCC1711D1C8E410019D22A /* MemberNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1701D1C8E410019D22A /* MemberNewController.swift */; };
+		B5FCC1741D1C8EB20019D22A /* EventNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1731D1C8EB20019D22A /* EventNewController.swift */; };
+		B5FCC1761D1C91D10019D22A /* EventTypeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		B5FCC1691D1C87680019D22A /* EventApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventApi.swift; path = Webservice/EventApi.swift; sourceTree = "<group>"; };
 		B5FCC16A1D1C87680019D22A /* MemberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberApi.swift; path = Webservice/MemberApi.swift; sourceTree = "<group>"; };
 		B5FCC16B1D1C87680019D22A /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestManager.swift; path = Webservice/RestManager.swift; sourceTree = "<group>"; };
+		B5FCC1701D1C8E410019D22A /* MemberNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberNewController.swift; path = Scenes/MemberNewController.swift; sourceTree = "<group>"; };
+		B5FCC1731D1C8EB20019D22A /* EventNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventNewController.swift; path = Scenes/EventNewController.swift; sourceTree = "<group>"; };
+		B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 				B5FCC1691D1C87680019D22A /* EventApi.swift */,
 				B5FCC16A1D1C87680019D22A /* MemberApi.swift */,
 				B5FCC16B1D1C87680019D22A /* RestManager.swift */,
+				B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */,
 			);
 			name = Webservice;
 			sourceTree = "<group>";
@@ -135,8 +142,10 @@
 				B5FCC15E1D1C875D0019D22A /* AttendanceEventController.swift */,
 				B5FCC15F1D1C875D0019D22A /* AttendanceMemberController.swift */,
 				B5FCC1601D1C875D0019D22A /* EventController.swift */,
+				B5FCC1731D1C8EB20019D22A /* EventNewController.swift */,
 				B5FCC1611D1C875D0019D22A /* GlobalSplitViewController.swift */,
 				B5FCC1621D1C875D0019D22A /* MemberController.swift */,
+				B5FCC1701D1C8E410019D22A /* MemberNewController.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -321,9 +330,11 @@
 				B5FCC16E1D1C87680019D22A /* MemberApi.swift in Sources */,
 				B5FCC1521D1C874A0019D22A /* DefaultHeaderCell.swift in Sources */,
 				B5FCC16C1D1C87680019D22A /* AttendanceApi.swift in Sources */,
+				B5FCC1761D1C91D10019D22A /* EventTypeApi.swift in Sources */,
 				B5FCC16F1D1C87680019D22A /* RestManager.swift in Sources */,
 				B5FCC1411D1C86B10019D22A /* Attendance.swift in Sources */,
 				B5FCC1651D1C875D0019D22A /* EventController.swift in Sources */,
+				B5FCC1741D1C8EB20019D22A /* EventNewController.swift in Sources */,
 				B5FCC1571D1C874A0019D22A /* MemberHeaderCell.swift in Sources */,
 				B5FCC1531D1C874A0019D22A /* EventCell.swift in Sources */,
 				B5FCC1541D1C874A0019D22A /* MemberAttendanceCell.swift in Sources */,
@@ -334,6 +345,7 @@
 				B5FCC1641D1C875D0019D22A /* AttendanceMemberController.swift in Sources */,
 				B5FCC1451D1C86B10019D22A /* MemberType.swift in Sources */,
 				B5FCC1431D1C86B10019D22A /* EventType.swift in Sources */,
+				B5FCC1711D1C8E410019D22A /* MemberNewController.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
 				B5FCC1561D1C874A0019D22A /* MemberCell.swift in Sources */,
 				B5FCC1551D1C874A0019D22A /* MemberAttendanceHeaderCell.swift in Sources */,
