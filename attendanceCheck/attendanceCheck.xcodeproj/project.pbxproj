@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B51837981CF5016200527459 /* DefaultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837921CF5016200527459 /* DefaultHeaderCell.swift */; };
-		B51837991CF5016200527459 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837931CF5016200527459 /* EventCell.swift */; };
-		B518379A1CF5016200527459 /* MemberHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837941CF5016200527459 /* MemberHeaderCell.swift */; };
-		B518379B1CF5016200527459 /* vwDefaultHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */; };
-		B518379C1CF5016200527459 /* vwEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837961CF5016200527459 /* vwEventCell.xib */; };
-		B518379D1CF5016200527459 /* vwMemberHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51837971CF5016200527459 /* vwMemberHeaderCell.xib */; };
-		B518379F1CF5064400527459 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B518379E1CF5064400527459 /* Event.swift */; };
-		B51837A11CF5066400527459 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837A01CF5066400527459 /* Member.swift */; };
-		B51837A31CF50F2100527459 /* EventApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51837A21CF50F2100527459 /* EventApi.swift */; };
-		B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */; };
-		B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F27531CEB74E000C09AE4 /* MemberCell.swift */; };
-		B5ACF2FB1CEB72C4005E57FD /* vwMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */; };
 		B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */; };
-		B5E54D551CAB1CE200E00F8C /* AttendanceEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D541CAB1CE200E00F8C /* AttendanceEventController.swift */; };
-		B5E54D571CAB1CE200E00F8C /* AttendanceMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D561CAB1CE200E00F8C /* AttendanceMemberController.swift */; };
 		B5E54D5A1CAB1CE200E00F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E54D581CAB1CE200E00F8C /* Main.storyboard */; };
 		B5E54D5C1CAB1CE200E00F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E54D5B1CAB1CE200E00F8C /* Assets.xcassets */; };
 		B5E54D5F1CAB1CE200E00F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E54D5D1CAB1CE200E00F8C /* LaunchScreen.storyboard */; };
 		B5E54D6A1CAB1CE200E00F8C /* attendanceCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E54D691CAB1CE200E00F8C /* attendanceCheckTests.swift */; };
-		B5FCC1231D197C740019D22A /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */; };
-		B5FCC1271D1983B20019D22A /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1261D1983B20019D22A /* EventController.swift */; };
-		B5FCC1291D1988A30019D22A /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1281D1988A30019D22A /* MemberController.swift */; };
-		B5FCC12B1D198A1D0019D22A /* MemberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC12A1D198A1D0019D22A /* MemberApi.swift */; };
-		B5FCC12D1D198C6D0019D22A /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC12C1D198C6D0019D22A /* MemberType.swift */; };
-		B5FCC12F1D1B1DB50019D22A /* AttendanceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC12E1D1B1DB50019D22A /* AttendanceApi.swift */; };
-		B5FCC1311D1B1E480019D22A /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1301D1B1E480019D22A /* Attendance.swift */; };
-		B5FCC1331D1B38CA0019D22A /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1321D1B38CA0019D22A /* EventType.swift */; };
-		B5FCC1361D1C5D790019D22A /* MemberAttendanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1341D1C5D790019D22A /* MemberAttendanceCell.swift */; };
-		B5FCC1371D1C5D790019D22A /* vwMemberAttendanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC1351D1C5D790019D22A /* vwMemberAttendanceCell.xib */; };
-		B5FCC13A1D1C5EC20019D22A /* MemberAttendanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1381D1C5EC20019D22A /* MemberAttendanceHeaderCell.swift */; };
-		B5FCC13B1D1C5EC20019D22A /* vwMemberAttendanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC1391D1C5EC20019D22A /* vwMemberAttendanceHeaderCell.xib */; };
+		B5FCC1411D1C86B10019D22A /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC13C1D1C86B10019D22A /* Attendance.swift */; };
+		B5FCC1421D1C86B10019D22A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC13D1D1C86B10019D22A /* Event.swift */; };
+		B5FCC1431D1C86B10019D22A /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC13E1D1C86B10019D22A /* EventType.swift */; };
+		B5FCC1441D1C86B10019D22A /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC13F1D1C86B10019D22A /* Member.swift */; };
+		B5FCC1451D1C86B10019D22A /* MemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1401D1C86B10019D22A /* MemberType.swift */; };
+		B5FCC1521D1C874A0019D22A /* DefaultHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1461D1C874A0019D22A /* DefaultHeaderCell.swift */; };
+		B5FCC1531D1C874A0019D22A /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1471D1C874A0019D22A /* EventCell.swift */; };
+		B5FCC1541D1C874A0019D22A /* MemberAttendanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1481D1C874A0019D22A /* MemberAttendanceCell.swift */; };
+		B5FCC1551D1C874A0019D22A /* MemberAttendanceHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1491D1C874A0019D22A /* MemberAttendanceHeaderCell.swift */; };
+		B5FCC1561D1C874A0019D22A /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC14A1D1C874A0019D22A /* MemberCell.swift */; };
+		B5FCC1571D1C874A0019D22A /* MemberHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC14B1D1C874A0019D22A /* MemberHeaderCell.swift */; };
+		B5FCC1581D1C874A0019D22A /* vwDefaultHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC14C1D1C874A0019D22A /* vwDefaultHeaderCell.xib */; };
+		B5FCC1591D1C874A0019D22A /* vwEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC14D1D1C874A0019D22A /* vwEventCell.xib */; };
+		B5FCC15A1D1C874A0019D22A /* vwMemberAttendanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC14E1D1C874A0019D22A /* vwMemberAttendanceCell.xib */; };
+		B5FCC15B1D1C874A0019D22A /* vwMemberAttendanceHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC14F1D1C874A0019D22A /* vwMemberAttendanceHeaderCell.xib */; };
+		B5FCC15C1D1C874A0019D22A /* vwMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC1501D1C874A0019D22A /* vwMemberCell.xib */; };
+		B5FCC15D1D1C874A0019D22A /* vwMemberHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5FCC1511D1C874A0019D22A /* vwMemberHeaderCell.xib */; };
+		B5FCC1631D1C875D0019D22A /* AttendanceEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC15E1D1C875D0019D22A /* AttendanceEventController.swift */; };
+		B5FCC1641D1C875D0019D22A /* AttendanceMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC15F1D1C875D0019D22A /* AttendanceMemberController.swift */; };
+		B5FCC1651D1C875D0019D22A /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1601D1C875D0019D22A /* EventController.swift */; };
+		B5FCC1661D1C875D0019D22A /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1611D1C875D0019D22A /* GlobalSplitViewController.swift */; };
+		B5FCC1671D1C875D0019D22A /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1621D1C875D0019D22A /* MemberController.swift */; };
+		B5FCC16C1D1C87680019D22A /* AttendanceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1681D1C87680019D22A /* AttendanceApi.swift */; };
+		B5FCC16D1D1C87680019D22A /* EventApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1691D1C87680019D22A /* EventApi.swift */; };
+		B5FCC16E1D1C87680019D22A /* MemberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC16A1D1C87680019D22A /* MemberApi.swift */; };
+		B5FCC16F1D1C87680019D22A /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC16B1D1C87680019D22A /* RestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,22 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B51837921CF5016200527459 /* DefaultHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeaderCell.swift; sourceTree = "<group>"; };
-		B51837931CF5016200527459 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		B51837941CF5016200527459 /* MemberHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberHeaderCell.swift; sourceTree = "<group>"; };
-		B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwDefaultHeaderCell.xib; sourceTree = "<group>"; };
-		B51837961CF5016200527459 /* vwEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwEventCell.xib; sourceTree = "<group>"; };
-		B51837971CF5016200527459 /* vwMemberHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberHeaderCell.xib; sourceTree = "<group>"; };
-		B518379E1CF5064400527459 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		B51837A01CF5066400527459 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		B51837A21CF50F2100527459 /* EventApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventApi.swift; sourceTree = "<group>"; };
-		B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
-		B53F27531CEB74E000C09AE4 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
-		B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberCell.xib; sourceTree = "<group>"; };
 		B5E54D4F1CAB1CE200E00F8C /* attendanceCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = attendanceCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E54D521CAB1CE200E00F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5E54D541CAB1CE200E00F8C /* AttendanceEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceEventController.swift; sourceTree = "<group>"; };
-		B5E54D561CAB1CE200E00F8C /* AttendanceMemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceMemberController.swift; sourceTree = "<group>"; };
 		B5E54D591CAB1CE200E00F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5E54D5B1CAB1CE200E00F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5E54D5E1CAB1CE200E00F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,18 +60,32 @@
 		B5E54D651CAB1CE200E00F8C /* attendanceCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = attendanceCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E54D691CAB1CE200E00F8C /* attendanceCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attendanceCheckTests.swift; sourceTree = "<group>"; };
 		B5E54D6B1CAB1CE200E00F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
-		B5FCC1261D1983B20019D22A /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
-		B5FCC1281D1988A30019D22A /* MemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
-		B5FCC12A1D198A1D0019D22A /* MemberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberApi.swift; sourceTree = "<group>"; };
-		B5FCC12C1D198C6D0019D22A /* MemberType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberType.swift; sourceTree = "<group>"; };
-		B5FCC12E1D1B1DB50019D22A /* AttendanceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceApi.swift; sourceTree = "<group>"; };
-		B5FCC1301D1B1E480019D22A /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
-		B5FCC1321D1B38CA0019D22A /* EventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
-		B5FCC1341D1C5D790019D22A /* MemberAttendanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberAttendanceCell.swift; sourceTree = "<group>"; };
-		B5FCC1351D1C5D790019D22A /* vwMemberAttendanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberAttendanceCell.xib; sourceTree = "<group>"; };
-		B5FCC1381D1C5EC20019D22A /* MemberAttendanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberAttendanceHeaderCell.swift; sourceTree = "<group>"; };
-		B5FCC1391D1C5EC20019D22A /* vwMemberAttendanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vwMemberAttendanceHeaderCell.xib; sourceTree = "<group>"; };
+		B5FCC13C1D1C86B10019D22A /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Models/Attendance.swift; sourceTree = "<group>"; };
+		B5FCC13D1D1C86B10019D22A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
+		B5FCC13E1D1C86B10019D22A /* EventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventType.swift; path = Models/EventType.swift; sourceTree = "<group>"; };
+		B5FCC13F1D1C86B10019D22A /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = Models/Member.swift; sourceTree = "<group>"; };
+		B5FCC1401D1C86B10019D22A /* MemberType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberType.swift; path = Models/MemberType.swift; sourceTree = "<group>"; };
+		B5FCC1461D1C874A0019D22A /* DefaultHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultHeaderCell.swift; path = Common/Views/DefaultHeaderCell.swift; sourceTree = "<group>"; };
+		B5FCC1471D1C874A0019D22A /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = Common/Views/EventCell.swift; sourceTree = "<group>"; };
+		B5FCC1481D1C874A0019D22A /* MemberAttendanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberAttendanceCell.swift; path = Common/Views/MemberAttendanceCell.swift; sourceTree = "<group>"; };
+		B5FCC1491D1C874A0019D22A /* MemberAttendanceHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberAttendanceHeaderCell.swift; path = Common/Views/MemberAttendanceHeaderCell.swift; sourceTree = "<group>"; };
+		B5FCC14A1D1C874A0019D22A /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberCell.swift; path = Common/Views/MemberCell.swift; sourceTree = "<group>"; };
+		B5FCC14B1D1C874A0019D22A /* MemberHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberHeaderCell.swift; path = Common/Views/MemberHeaderCell.swift; sourceTree = "<group>"; };
+		B5FCC14C1D1C874A0019D22A /* vwDefaultHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwDefaultHeaderCell.xib; path = Common/Views/vwDefaultHeaderCell.xib; sourceTree = "<group>"; };
+		B5FCC14D1D1C874A0019D22A /* vwEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwEventCell.xib; path = Common/Views/vwEventCell.xib; sourceTree = "<group>"; };
+		B5FCC14E1D1C874A0019D22A /* vwMemberAttendanceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwMemberAttendanceCell.xib; path = Common/Views/vwMemberAttendanceCell.xib; sourceTree = "<group>"; };
+		B5FCC14F1D1C874A0019D22A /* vwMemberAttendanceHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwMemberAttendanceHeaderCell.xib; path = Common/Views/vwMemberAttendanceHeaderCell.xib; sourceTree = "<group>"; };
+		B5FCC1501D1C874A0019D22A /* vwMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwMemberCell.xib; path = Common/Views/vwMemberCell.xib; sourceTree = "<group>"; };
+		B5FCC1511D1C874A0019D22A /* vwMemberHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = vwMemberHeaderCell.xib; path = Common/Views/vwMemberHeaderCell.xib; sourceTree = "<group>"; };
+		B5FCC15E1D1C875D0019D22A /* AttendanceEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceEventController.swift; path = Scenes/AttendanceEventController.swift; sourceTree = "<group>"; };
+		B5FCC15F1D1C875D0019D22A /* AttendanceMemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceMemberController.swift; path = Scenes/AttendanceMemberController.swift; sourceTree = "<group>"; };
+		B5FCC1601D1C875D0019D22A /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventController.swift; path = Scenes/EventController.swift; sourceTree = "<group>"; };
+		B5FCC1611D1C875D0019D22A /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalSplitViewController.swift; path = Scenes/GlobalSplitViewController.swift; sourceTree = "<group>"; };
+		B5FCC1621D1C875D0019D22A /* MemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberController.swift; path = Scenes/MemberController.swift; sourceTree = "<group>"; };
+		B5FCC1681D1C87680019D22A /* AttendanceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceApi.swift; path = Webservice/AttendanceApi.swift; sourceTree = "<group>"; };
+		B5FCC1691D1C87680019D22A /* EventApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventApi.swift; path = Webservice/EventApi.swift; sourceTree = "<group>"; };
+		B5FCC16A1D1C87680019D22A /* MemberApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberApi.swift; path = Webservice/MemberApi.swift; sourceTree = "<group>"; };
+		B5FCC16B1D1C87680019D22A /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestManager.swift; path = Webservice/RestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +109,11 @@
 		B53BFCD71CD948C600AF6912 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCC1301D1B1E480019D22A /* Attendance.swift */,
-				B518379E1CF5064400527459 /* Event.swift */,
-				B5FCC1321D1B38CA0019D22A /* EventType.swift */,
-				B51837A01CF5066400527459 /* Member.swift */,
-				B5FCC12C1D198C6D0019D22A /* MemberType.swift */,
+				B5FCC13C1D1C86B10019D22A /* Attendance.swift */,
+				B5FCC13D1D1C86B10019D22A /* Event.swift */,
+				B5FCC13E1D1C86B10019D22A /* EventType.swift */,
+				B5FCC13F1D1C86B10019D22A /* Member.swift */,
+				B5FCC1401D1C86B10019D22A /* MemberType.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -121,10 +121,10 @@
 		B53BFCDC1CDA0DAA00AF6912 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCC12E1D1B1DB50019D22A /* AttendanceApi.swift */,
-				B51837A21CF50F2100527459 /* EventApi.swift */,
-				B5FCC12A1D198A1D0019D22A /* MemberApi.swift */,
-				B53BFCDD1CDA0DDF00AF6912 /* RestManager.swift */,
+				B5FCC1681D1C87680019D22A /* AttendanceApi.swift */,
+				B5FCC1691D1C87680019D22A /* EventApi.swift */,
+				B5FCC16A1D1C87680019D22A /* MemberApi.swift */,
+				B5FCC16B1D1C87680019D22A /* RestManager.swift */,
 			);
 			name = Webservice;
 			sourceTree = "<group>";
@@ -132,11 +132,11 @@
 		B53F27571CEBA35400C09AE4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B5E54D541CAB1CE200E00F8C /* AttendanceEventController.swift */,
-				B5E54D561CAB1CE200E00F8C /* AttendanceMemberController.swift */,
-				B5FCC1261D1983B20019D22A /* EventController.swift */,
-				B5FCC1221D197C740019D22A /* GlobalSplitViewController.swift */,
-				B5FCC1281D1988A30019D22A /* MemberController.swift */,
+				B5FCC15E1D1C875D0019D22A /* AttendanceEventController.swift */,
+				B5FCC15F1D1C875D0019D22A /* AttendanceMemberController.swift */,
+				B5FCC1601D1C875D0019D22A /* EventController.swift */,
+				B5FCC1611D1C875D0019D22A /* GlobalSplitViewController.swift */,
+				B5FCC1621D1C875D0019D22A /* MemberController.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -152,18 +152,18 @@
 		B53F27591CEBA37B00C09AE4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B51837921CF5016200527459 /* DefaultHeaderCell.swift */,
-				B51837931CF5016200527459 /* EventCell.swift */,
-				B5FCC1341D1C5D790019D22A /* MemberAttendanceCell.swift */,
-				B5FCC1381D1C5EC20019D22A /* MemberAttendanceHeaderCell.swift */,
-				B53F27531CEB74E000C09AE4 /* MemberCell.swift */,
-				B51837941CF5016200527459 /* MemberHeaderCell.swift */,
-				B51837951CF5016200527459 /* vwDefaultHeaderCell.xib */,
-				B51837961CF5016200527459 /* vwEventCell.xib */,
-				B5FCC1351D1C5D790019D22A /* vwMemberAttendanceCell.xib */,
-				B5FCC1391D1C5EC20019D22A /* vwMemberAttendanceHeaderCell.xib */,
-				B5ACF2FA1CEB72C4005E57FD /* vwMemberCell.xib */,
-				B51837971CF5016200527459 /* vwMemberHeaderCell.xib */,
+				B5FCC1461D1C874A0019D22A /* DefaultHeaderCell.swift */,
+				B5FCC1471D1C874A0019D22A /* EventCell.swift */,
+				B5FCC1481D1C874A0019D22A /* MemberAttendanceCell.swift */,
+				B5FCC1491D1C874A0019D22A /* MemberAttendanceHeaderCell.swift */,
+				B5FCC14A1D1C874A0019D22A /* MemberCell.swift */,
+				B5FCC14B1D1C874A0019D22A /* MemberHeaderCell.swift */,
+				B5FCC14C1D1C874A0019D22A /* vwDefaultHeaderCell.xib */,
+				B5FCC14D1D1C874A0019D22A /* vwEventCell.xib */,
+				B5FCC14E1D1C874A0019D22A /* vwMemberAttendanceCell.xib */,
+				B5FCC14F1D1C874A0019D22A /* vwMemberAttendanceHeaderCell.xib */,
+				B5FCC1501D1C874A0019D22A /* vwMemberCell.xib */,
+				B5FCC1511D1C874A0019D22A /* vwMemberHeaderCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,15 +292,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B518379D1CF5016200527459 /* vwMemberHeaderCell.xib in Resources */,
-				B5FCC13B1D1C5EC20019D22A /* vwMemberAttendanceHeaderCell.xib in Resources */,
 				B5E54D5F1CAB1CE200E00F8C /* LaunchScreen.storyboard in Resources */,
+				B5FCC1591D1C874A0019D22A /* vwEventCell.xib in Resources */,
+				B5FCC15B1D1C874A0019D22A /* vwMemberAttendanceHeaderCell.xib in Resources */,
+				B5FCC15D1D1C874A0019D22A /* vwMemberHeaderCell.xib in Resources */,
 				B5E54D5C1CAB1CE200E00F8C /* Assets.xcassets in Resources */,
-				B518379B1CF5016200527459 /* vwDefaultHeaderCell.xib in Resources */,
-				B518379C1CF5016200527459 /* vwEventCell.xib in Resources */,
-				B5ACF2FB1CEB72C4005E57FD /* vwMemberCell.xib in Resources */,
+				B5FCC15A1D1C874A0019D22A /* vwMemberAttendanceCell.xib in Resources */,
 				B5E54D5A1CAB1CE200E00F8C /* Main.storyboard in Resources */,
-				B5FCC1371D1C5D790019D22A /* vwMemberAttendanceCell.xib in Resources */,
+				B5FCC15C1D1C874A0019D22A /* vwMemberCell.xib in Resources */,
+				B5FCC1581D1C874A0019D22A /* vwDefaultHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,27 +318,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FCC12B1D198A1D0019D22A /* MemberApi.swift in Sources */,
-				B51837981CF5016200527459 /* DefaultHeaderCell.swift in Sources */,
-				B5FCC1291D1988A30019D22A /* MemberController.swift in Sources */,
-				B518379F1CF5064400527459 /* Event.swift in Sources */,
-				B51837991CF5016200527459 /* EventCell.swift in Sources */,
-				B5FCC12D1D198C6D0019D22A /* MemberType.swift in Sources */,
-				B5FCC1311D1B1E480019D22A /* Attendance.swift in Sources */,
-				B5E54D571CAB1CE200E00F8C /* AttendanceMemberController.swift in Sources */,
-				B5FCC1271D1983B20019D22A /* EventController.swift in Sources */,
-				B5E54D551CAB1CE200E00F8C /* AttendanceEventController.swift in Sources */,
-				B5FCC13A1D1C5EC20019D22A /* MemberAttendanceHeaderCell.swift in Sources */,
-				B5FCC12F1D1B1DB50019D22A /* AttendanceApi.swift in Sources */,
-				B51837A31CF50F2100527459 /* EventApi.swift in Sources */,
-				B5FCC1361D1C5D790019D22A /* MemberAttendanceCell.swift in Sources */,
+				B5FCC16E1D1C87680019D22A /* MemberApi.swift in Sources */,
+				B5FCC1521D1C874A0019D22A /* DefaultHeaderCell.swift in Sources */,
+				B5FCC16C1D1C87680019D22A /* AttendanceApi.swift in Sources */,
+				B5FCC16F1D1C87680019D22A /* RestManager.swift in Sources */,
+				B5FCC1411D1C86B10019D22A /* Attendance.swift in Sources */,
+				B5FCC1651D1C875D0019D22A /* EventController.swift in Sources */,
+				B5FCC1571D1C874A0019D22A /* MemberHeaderCell.swift in Sources */,
+				B5FCC1531D1C874A0019D22A /* EventCell.swift in Sources */,
+				B5FCC1541D1C874A0019D22A /* MemberAttendanceCell.swift in Sources */,
+				B5FCC1661D1C875D0019D22A /* GlobalSplitViewController.swift in Sources */,
+				B5FCC1421D1C86B10019D22A /* Event.swift in Sources */,
+				B5FCC1671D1C875D0019D22A /* MemberController.swift in Sources */,
+				B5FCC16D1D1C87680019D22A /* EventApi.swift in Sources */,
+				B5FCC1641D1C875D0019D22A /* AttendanceMemberController.swift in Sources */,
+				B5FCC1451D1C86B10019D22A /* MemberType.swift in Sources */,
+				B5FCC1431D1C86B10019D22A /* EventType.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
-				B5FCC1331D1B38CA0019D22A /* EventType.swift in Sources */,
-				B53BFCDE1CDA0DDF00AF6912 /* RestManager.swift in Sources */,
-				B53F27541CEB74E000C09AE4 /* MemberCell.swift in Sources */,
-				B518379A1CF5016200527459 /* MemberHeaderCell.swift in Sources */,
-				B5FCC1231D197C740019D22A /* GlobalSplitViewController.swift in Sources */,
-				B51837A11CF5066400527459 /* Member.swift in Sources */,
+				B5FCC1561D1C874A0019D22A /* MemberCell.swift in Sources */,
+				B5FCC1551D1C874A0019D22A /* MemberAttendanceHeaderCell.swift in Sources */,
+				B5FCC1631D1C875D0019D22A /* AttendanceEventController.swift in Sources */,
+				B5FCC1441D1C86B10019D22A /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
