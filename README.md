@@ -1,15 +1,18 @@
 # ch.bfh.ios.programming
 Simple iOS swift application for educational purpose
 
+### Overview
+The app provides the possibility to log and monitor the member attendances for various events.
+
 ### Installation
 - clone project from github
 ```
 $ git clone https://github.com/f4nky/ch.bfh.ios.programming.git
 ```
-- Open project in XCode
+- Open project 'attendanceCheck' in XCode
 - Run project with iOS simulator
 
-Note: No need to install/configure the server. REST API can be accessed by a public Digital Ocean server (see chapter 'REST API').
+Note: No need to install/configure the server. REST API can be accessed via a public Digital Ocean server (see chapter 'REST API').
 
 ### REST API
 #### Base URI
@@ -19,7 +22,7 @@ http://46.101.106.41/api/v1/
 #### Periods
 ```
 GET         - /periods/
-GET/PUT/DEL - /periods/[id]
+GET/PUT/DEL - /periods/[id]/
 ```
 ```
 [{
@@ -30,7 +33,7 @@ GET/PUT/DEL - /periods/[id]
 #### events
 ```
 GET         - /events/
-GET/PUT/DEL - /events/[id]
+GET/PUT/DEL - /events/[id]/
 ```
 ```
 [{
@@ -51,7 +54,7 @@ GET/PUT/DEL - /events/[id]
 #### Event types
 ```
 GET         - /event-types/
-GET/PUT/DEL - /event-types/[id]
+GET/PUT/DEL - /event-types/[id]/
 ```
 ```
 [{
@@ -63,7 +66,7 @@ GET/PUT/DEL - /event-types/[id]
 #### Members
 ```
 GET         - /members/
-GET/PUT/DEL - /members/[id]
+GET/PUT/DEL - /members/[id]/
 ```
 ```
 [{
@@ -81,7 +84,7 @@ GET/PUT/DEL - /members/[id]
 #### Member types
 ```
 GET         - /member-types/
-GET/PUT/DEL - /member-types/[id]
+GET/PUT/DEL - /member-types/[id]/
 ```
 ```
 [{
@@ -93,8 +96,8 @@ GET/PUT/DEL - /member-types/[id]
 #### Attendances
 ```
 GET         - /attendances/
-GET         - /attendances/[eventDate]    //Format: YYYY-MM-dd
-GET/PUT/DEL - /attendances/[id]
+GET         - /attendances/[eventDate]/    //Format: YYYY-MM-dd
+GET/PUT/DEL - /attendances/[id]/
 ```
 ```
 [{
