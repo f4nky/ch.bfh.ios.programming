@@ -51,7 +51,7 @@ class Attendance(models.Model):
 
     event = models.ForeignKey(Event, on_delete=models.CASCADE, default=-99)
     member = models.ForeignKey(Member, on_delete=models.CASCADE, default=-99)
-    status = models.CharField(max_length=3, choices=STATUSES)
+    status = models.CharField(max_length=3, choices=STATUSES, blank=True, null=True)
     
     def __str__(self):
         return str(self.event.date) + ' - ' + self.event.event_type.name + ' - ' + self.member.first_name + ' ' + self.member.last_name
