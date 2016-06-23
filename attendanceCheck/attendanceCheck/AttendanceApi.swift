@@ -41,7 +41,13 @@ class AttendanceApi {
     }
     
     static func updateAttendance(id: Int, body: Attendance, completion: () -> Void) {
-        let json = ["status": body.status!]
+        let json: [String: AnyObject]
+        if let status = body.status {
+            json = ["status": status]
+        } else {
+            json = ["status": NSNull()]
+        }
+        
         RestManager.performRequest("attendances/" + String(id) + "/", method: "PUT", body: json) {
             (data, response, error) in
             completion()

@@ -93,7 +93,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             case "ENT":
                 newStatus = "UNE"
             case "UNE":
-                newStatus = "ANW"
+                newStatus = nil
             default:
                 newStatus = "ANW"
             }
@@ -118,6 +118,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             default:
                 btn.backgroundColor = UIColor.clearColor()
             }
+        } else {
+            btn.backgroundColor = UIColor.clearColor()
         }
     }
 
