@@ -36,10 +36,8 @@ class EventController: UITableViewController {
         loadEventData()
     }
     
-    func refresh(sender:AnyObject)
-    {
+    func refresh(sender:AnyObject) {
         loadEventData()
-        self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
     

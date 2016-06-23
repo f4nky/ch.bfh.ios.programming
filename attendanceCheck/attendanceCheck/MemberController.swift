@@ -19,6 +19,8 @@ class MemberController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.refreshControl?.addTarget(self, action: #selector(MemberController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
         let nibHeaderCell = UINib(nibName: "vwMemberAttendanceHeaderCell", bundle: nil)
         memberTableView.registerNib(nibHeaderCell, forCellReuseIdentifier: "memberAttendanceHeaderCell")
         
@@ -35,7 +37,14 @@ class MemberController: UITableViewController {
         
         loadMemberData()
     }
-        
+    
+    func refresh(sender:AnyObject) {
+        self.sections = [String]()
+        self.members = [[Member]]()
+        loadMemberData()
+        self.refreshControl?.endRefreshing()
+    }
+    
     func loadMemberData() {
         MemberApi.getMembers() {members in
             var tmpMemberType: String?

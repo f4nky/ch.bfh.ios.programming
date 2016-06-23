@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var event: Event?
     var sections = [String]()
     var attendances = [[Attendance]]()
+    let dateFormatter = NSDateFormatter()
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,6 +40,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryOverlay
         self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        self.title = "Anwesenheiten, " + dateFormatter.stringFromDate((self.event?.date)!)
         
         if self.event != nil {
             loadAttendanceData()
@@ -105,9 +110,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCellWithIdentifier("memberAttendanceCell", forIndexPath: indexPath) as! MemberAttendanceCell
 
         let attendance = attendances[indexPath.section][indexPath.row]
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
         
         cell.lblMemberName.text = (attendance.member?.firstName?.uppercaseString)! + " " + (attendance.member?.lastName?.uppercaseString)!
         cell.lblBirthDate.text = dateFormatter.stringFromDate((attendance.member?.birthDate)!)

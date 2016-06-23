@@ -21,6 +21,8 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.refreshControl?.addTarget(self, action: #selector(MasterViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -48,6 +50,11 @@ class MasterViewController: UITableViewController {
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
             self.performSegueWithIdentifier("showDetail", sender: initialIndexPath)
         }
+    }
+    
+    func refresh(sender:AnyObject) {
+        loadAttendanceData()
+        self.refreshControl?.endRefreshing()
     }
     
     func loadAttendanceData() {
