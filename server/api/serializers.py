@@ -35,8 +35,8 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'date', 'description', 'period', 'event_type')
         
 class AttendanceSerializer(serializers.HyperlinkedModelSerializer):
-    event = EventSerializer()
-    member = MemberSerializer()
+    event = EventSerializer(read_only=True)
+    member = MemberSerializer(read_only=True)
     
     class Meta:
         model = Attendance
