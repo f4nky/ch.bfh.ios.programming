@@ -12,7 +12,7 @@ class RestManager: NSURLSessionDataTask {
     
     static let apiBaseUrl: String = "http://46.101.106.41/api/v1/"
     
-    static func performRequest(urlPart: String, method: String, body: NSObject?, completionHandler: (AnyObject?, NSURLResponse?, NSError?) -> Void) {
+    static func performRequest(urlPart: String, method: String, body: AnyObject?, completionHandler: (AnyObject?, NSURLResponse?, NSError?) -> Void) {
         
         print(RestManager.apiBaseUrl + urlPart)
         

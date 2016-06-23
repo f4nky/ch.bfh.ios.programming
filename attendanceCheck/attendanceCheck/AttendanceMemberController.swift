@@ -79,6 +79,47 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    func changeAttendanceStatus(sender: UIButton) {
+        let touchPoint: CGPoint = sender.convertPoint(CGPointZero, toView: memberTableView)
+        let btnIndexPath: NSIndexPath = self.memberTableView.indexPathForRowAtPoint(touchPoint)!
+        let attendance = attendances[btnIndexPath.section][btnIndexPath.row]
+        var newStatus: String?
+        
+        if let status = attendance.status {
+            switch status {
+            case "ANW":
+                newStatus = "ENT"
+            case "ENT":
+                newStatus = "UNE"
+            case "UNE":
+                newStatus = "ANW"
+            default:
+                newStatus = "ANW"
+            }
+        } else {
+            newStatus = "ANW"
+        }
+        attendance.status = newStatus
+        
+        AttendanceApi.updateAttendance(attendance.id!, body: attendance) {_ in}
+        changeStatusBtnStyle(sender, newStatus: newStatus)
+    }
+    
+    func changeStatusBtnStyle(btn: UIButton, newStatus: String?) {
+        if let status = newStatus {
+            switch status {
+            case "ANW":
+                btn.backgroundColor = UIColor.greenColor()
+            case "ENT":
+                btn.backgroundColor = UIColor.orangeColor()
+            case "UNE":
+                btn.backgroundColor = UIColor.redColor()
+            default:
+                btn.backgroundColor = UIColor.clearColor()
+            }
+        }
+    }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sections.count
@@ -98,7 +139,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return attendances[section].count
-        //return attendances.count
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -113,6 +153,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.lblMemberName.text = (attendance.member?.firstName?.uppercaseString)! + " " + (attendance.member?.lastName?.uppercaseString)!
         cell.lblBirthDate.text = dateFormatter.stringFromDate((attendance.member?.birthDate)!)
+        cell.btnMemberStatus.addTarget(self, action: #selector(DetailViewController.changeAttendanceStatus(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        changeStatusBtnStyle(cell.btnMemberStatus, newStatus: attendance.status)
         return cell
     }
 }

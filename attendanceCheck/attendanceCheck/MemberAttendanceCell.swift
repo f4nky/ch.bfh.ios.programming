@@ -15,10 +15,6 @@ class MemberAttendanceCell: UITableViewCell {
     @IBOutlet weak var lblBirthDate: UILabel!
     @IBOutlet weak var btnMemberStatus: UIButton!
     
-    @IBAction func buttonPressed(sender: AnyObject) {
-        self.btnMemberStatus.backgroundColor = UIColor.redColor()
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

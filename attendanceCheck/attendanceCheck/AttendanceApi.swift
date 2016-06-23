@@ -39,4 +39,12 @@ class AttendanceApi {
             completion(attendances)
         }
     }
+    
+    static func updateAttendance(id: Int, body: Attendance, completion: () -> Void) {
+        let json = ["status": body.status!]
+        RestManager.performRequest("attendances/" + String(id) + "/", method: "PUT", body: json) {
+            (data, response, error) in
+            completion()
+        }
+    }
 }
