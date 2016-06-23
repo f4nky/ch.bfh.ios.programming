@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -100,11 +101,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-6Z-zg0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-6Z-zg0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" rowHeight="55" id="j97-cB-FgB" customClass="MemberCell" customModule="attendanceCheck" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="j97-cB-FgB" customClass="MemberCell" customModule="attendanceCheck" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="600" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j97-cB-FgB" id="fJJ-zu-ZPY">
@@ -121,9 +122,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r7i-6Z-zg0" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-20" id="cUB-9C-tAA"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="r7i-6Z-zg0" secondAttribute="bottom" id="hfq-B8-AHD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r7i-6Z-zg0" secondAttribute="trailing" constant="-20" id="r7s-5F-D4p"/>
+                            <constraint firstItem="r7i-6Z-zg0" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="topMargin" id="yNY-Vq-kB0"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Anwesenheiten" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="memberTableView" destination="r7i-6Z-zg0" id="q46-dL-dED"/>
                     </connections>
@@ -226,7 +233,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="fdU-J7-1dc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Events" id="H82-en-MzJ"/>
                     <connections>
                         <outlet property="eventTableView" destination="bXs-wx-86g" id="TSO-Sd-8As"/>
                         <outlet property="memberTableView" destination="r7i-6Z-zg0" id="f7x-FF-qCM"/>

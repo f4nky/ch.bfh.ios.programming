@@ -14,22 +14,12 @@ class MasterViewController: UITableViewController {
     @IBOutlet var eventTableView: UITableView!
     
     var sections = ["April"]
-    /*var events = [[
-            Event(date: "2016-04-25", desc: "18.20 - 20.00"),
-            Event(date: "2016-04-29", desc: "18.20 - 20.00"),
-            Event(date: "2016-05-02", desc: "18.20 - 20.00")
-        ], []
-    ]*/
-    var attendances = [Attendance]()
+    var events = [Event]()
     
     var detailViewController: DetailViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -51,11 +41,18 @@ class MasterViewController: UITableViewController {
         eventTableView.rowHeight = 50.0
         
         loadAttendanceData()
+        
+        let initialIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.eventTableView.selectRowAtIndexPath(initialIndexPath, animated: true, scrollPosition:UITableViewScrollPosition.None)
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            self.performSegueWithIdentifier("showDetail", sender: initialIndexPath)
+        }
     }
     
     func loadAttendanceData() {
-        AttendanceApi.getAttendances() {attendances in
-            self.attendances = attendances
+        EventApi.getEvents() {events in
+            self.events = events
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -63,14 +60,8 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
-        /*self.manager.getMembers() {members in
-            //print(members)
-            self.members = members
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                self.memberTableView.reloadData()
-            }
-        }*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,12 +76,18 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print(segue.identifier)
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let event = attendances[indexPath.row].event
+            
+            //if let indexPath = self.eventTableView.indexPathForSelectedRow {
+            if let indexPath = self.eventTableView.indexPathForCell(sender as! UITableViewCell) {
+                print(indexPath)
+                let event = events[indexPath.row]
+                print(event)
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = event
+                controller.event = event
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
+            } else {
+                print("blub")
             }
         }
     }
@@ -122,7 +119,7 @@ class MasterViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return events[section].count
-        return attendances.count
+        return events.count
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -134,12 +131,12 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("eventCell", forIndexPath: indexPath) as! EventCell
         
         //let event = events[indexPath.section][indexPath.row] as Event
-        let event = attendances[indexPath.row].event! as Event
+        let event = events[indexPath.row] as Event
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EE, dd.MM.yyyy"
         
-        cell.lblEventType!.text = "Tr"
+        cell.lblEventType!.text = event.eventType?.abbr
         cell.lblEventDate!.text = dateFormatter.stringFromDate(event.date!)
         cell.lblEventInfo!.text = event.desc
         

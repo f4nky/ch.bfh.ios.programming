@@ -11,19 +11,22 @@ import Foundation
 class Event {
     var date: NSDate?
     var desc: String?
+    var eventType: EventType?
     
-    init(date: NSDate, desc: String?) {
+    init(date: NSDate, desc: String?, eventType: EventType?) {
         self.date = date
         self.desc = desc
+        self.eventType = eventType
     }
     
-    init(date: String?, desc: String?) {
+    init(date: String?, desc: String?, eventType: EventType?) {
         if let tmpDate = date {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             self.date = dateFormatter.dateFromString(tmpDate)!
         }
         self.desc = desc
+        self.eventType = eventType
     }
     
     init(eventData: [String: AnyObject]) {
@@ -34,6 +37,10 @@ class Event {
         }
         if let desc = eventData["desc"] as? String {
             self.desc = desc
+        }
+        if let eventTypeData = eventData["event_type"] as? [String: AnyObject] {
+            let eventType = EventType(eventTypeData: eventTypeData)
+            self.eventType = eventType
         }
     }
 }

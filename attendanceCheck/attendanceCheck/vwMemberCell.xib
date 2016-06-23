@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" rowHeight="50" id="kZg-c7-HhX" customClass="MemberCell" customModule="attendanceCheck" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberCell" rowHeight="50" id="kZg-c7-HhX" customClass="MemberCell" customModule="attendanceCheck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kZg-c7-HhX" id="Qe2-jK-U0H">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="49.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-R8-9pF">
@@ -27,7 +27,7 @@
                             <constraint firstAttribute="width" secondItem="9yT-R8-9pF" secondAttribute="height" multiplier="1:1" id="fkd-BO-Jb6"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNK-F4-GQQ">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNK-F4-GQQ">
                         <rect key="frame" x="253" y="5" width="60" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KOe-u1-CkQ"/>
@@ -62,6 +62,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="9yT-R8-9pF" secondAttribute="bottom" constant="-1" id="iOB-Ex-2yh"/>
                     <constraint firstItem="bNK-F4-GQQ" firstAttribute="trailing" secondItem="Qe2-jK-U0H" secondAttribute="trailingMargin" id="j2K-WC-cNF"/>
                     <constraint firstItem="9yT-R8-9pF" firstAttribute="leading" secondItem="Qe2-jK-U0H" secondAttribute="leadingMargin" id="j6c-yb-Fnx"/>
+                    <constraint firstItem="bNK-F4-GQQ" firstAttribute="trailing" secondItem="Qe2-jK-U0H" secondAttribute="trailingMargin" id="lbF-ak-gCP"/>
                     <constraint firstAttribute="bottomMargin" secondItem="oB2-Ix-pnD" secondAttribute="bottom" constant="-1" id="sW5-be-ocv"/>
                     <constraint firstItem="oB2-Ix-pnD" firstAttribute="leading" secondItem="9yT-R8-9pF" secondAttribute="trailing" constant="23" id="us7-Bp-iqN"/>
                     <constraint firstItem="bNK-F4-GQQ" firstAttribute="top" secondItem="Qe2-jK-U0H" secondAttribute="topMargin" constant="-3" id="zjW-hQ-KpU"/>

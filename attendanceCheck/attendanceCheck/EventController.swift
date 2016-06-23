@@ -71,7 +71,7 @@ class EventController: UITableViewController {
         dateFormatter.dateFormat = "EE, dd.MM.yyyy"
         
         cell.accessoryType = UITableViewCellAccessoryType.None
-        cell.lblEventType!.text = "Tr"
+        cell.lblEventType!.text = event.eventType?.abbr
         cell.lblEventDate!.text = dateFormatter.stringFromDate(event.date!)
         cell.lblEventInfo!.text = event.desc
         

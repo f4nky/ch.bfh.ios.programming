@@ -13,8 +13,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var memberTableView: UITableView!
 
-    var sections = ["Trainer", "Spielerin"]
-    var members = [[
+    //var sections = ["Trainer", "Spielerin"]
+    /*var members = [[
             Member(id: 1, firstName: "Max", lastName: "Mustermann", birthDate: nil, memberType: nil),
             Member(id: 2, firstName: "Felix", lastName: "Muster", birthDate: nil, memberType: nil)
         ], [
@@ -22,23 +22,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             Member(id: 4, firstName: "Erika", lastName: "Musterfrau", birthDate: nil, memberType: nil),
             Member(id: 5, firstName: "Jane", lastName: "Doe", birthDate: nil, memberType: nil)
         ]
-    ]
-    
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        /*if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }*/
-    }
+    ]*/
+    var event: Event?
+    var sections = [String]()
+    var attendances = [[Attendance]]()
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,12 +48,46 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         memberTableView.layoutMargins = UIEdgeInsetsZero
         memberTableView.rowHeight = 50.0
         
-        self.configureView()
+        self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryOverlay
+        self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        if self.event != nil {
+            loadAttendanceData()
+        }
+    }
+    
+    func loadAttendanceData() {
+        AttendanceApi.getAttendancesForEvent(self.event!) {attendances in
+            var tmpMemberType: String?
+            var tmpAttendances = [Attendance]()
+            
+            tmpMemberType = nil
+            
+            for attendance in attendances {
+                if (attendance.member!.memberType?.name != tmpMemberType) {
+                    if (tmpMemberType != nil) {
+                        self.attendances.append(tmpAttendances)
+                        tmpAttendances = [Attendance]()
+                    }
+                    tmpAttendances.append(attendance)
+                    self.sections.append((attendance.member!.memberType?.name)!)
+                    tmpMemberType = attendance.member!.memberType?.name
+                } else {
+                    tmpAttendances.append(attendance)
+                }
+            }
+            if (tmpAttendances.count > 0) {
+                self.attendances.append(tmpAttendances)
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.memberTableView.reloadData()
+            }
+        }
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sections.count
-        //return 1
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -82,8 +103,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return members[section].count
-        //return members.count
+        return attendances[section].count
+        //return attendances.count
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -93,10 +114,14 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("memberCell", forIndexPath: indexPath) as! MemberCell
+
+        let attendance = attendances[indexPath.section][indexPath.row]
         
-        let member = members[indexPath.section][indexPath.row]
-        //let member = members[indexPath.row]
-        cell.lblMemberName.text = member.firstName!.uppercaseString + " " + member.lastName!.uppercaseString
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+        cell.lblMemberName.text = (attendance.member?.firstName?.uppercaseString)! + " " + (attendance.member?.lastName?.uppercaseString)!
+        cell.lblBirthDate.text = dateFormatter.stringFromDate((attendance.member?.birthDate)!)
         return cell
     }
 }

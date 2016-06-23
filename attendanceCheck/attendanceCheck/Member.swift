@@ -33,7 +33,7 @@ class Member {
         if let lastName = memberData["last_name"] as? String {
             self.lastName = lastName
         }
-        if let birthDate = memberData["birth_Date"] as? String {
+        if let birthDate = memberData["birth_date"] as? String {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             self.birthDate = dateFormatter.dateFromString(birthDate)!

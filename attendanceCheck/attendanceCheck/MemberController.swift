@@ -44,6 +44,7 @@ class MemberController: UITableViewController {
             tmpMemberType = nil
             
             for member in members {
+                print(member.birthDate)
                 if (member.memberType?.name != tmpMemberType) {
                     if (tmpMemberType != nil) {
                         self.members.append(tmpMembers)
@@ -100,9 +101,15 @@ class MemberController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("memberCell", forIndexPath: indexPath) as! MemberCell
         
+        
+        
         let member = members[indexPath.section][indexPath.row]
-        //let member = members[indexPath.row]
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        
         cell.lblMemberName.text = member.firstName!.uppercaseString + " " + member.lastName!.uppercaseString
+        cell.lblBirthDate.text = dateFormatter.stringFromDate(member.birthDate!)
         return cell
     }
 }
