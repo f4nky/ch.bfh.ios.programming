@@ -24,7 +24,7 @@ http://46.101.106.41/api/v1/
 GET         - /periods/
 GET/PUT/DEL - /periods/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "name": "Saison 16/17"
@@ -35,7 +35,7 @@ GET/PUT/DEL - /periods/[id]/
 GET         - /events/
 GET/PUT/DEL - /events/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "date": "2016-04-25",
@@ -56,7 +56,7 @@ GET/PUT/DEL - /events/[id]/
 GET         - /event-types/
 GET/PUT/DEL - /event-types/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "name": "Training",
@@ -68,7 +68,7 @@ GET/PUT/DEL - /event-types/[id]/
 GET         - /members/
 GET/PUT/DEL - /members/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "first_name": "John",
@@ -86,7 +86,7 @@ GET/PUT/DEL - /members/[id]/
 GET         - /member-types/
 GET/PUT/DEL - /member-types/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "name": "TrainerIn",
@@ -99,7 +99,7 @@ GET         - /attendances/
 GET         - /attendances/[eventDate]/    //Format: YYYY-MM-dd
 GET/PUT/DEL - /attendances/[id]/
 ```
-```
+```JSON
 [{
     "id": 1,
     "status": "ANW",
