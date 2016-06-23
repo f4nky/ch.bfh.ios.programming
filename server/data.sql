@@ -9,8 +9,8 @@ INSERT INTO api_period (id, name) VALUES
 	(1, 'Saison 16/17');
 
 INSERT INTO api_membertype (id, name) VALUES
-	(1, 'TrainerIn'),
-	(2, 'SpielerIn');
+	(1, 'Trainer/in'),
+	(2, 'Spieler/in');
 
 INSERT INTO api_eventtype (id, name, abbr) VALUES
 	(1, 'Training', 'Tr'),

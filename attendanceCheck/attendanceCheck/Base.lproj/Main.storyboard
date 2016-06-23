@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="259" y="-136"/>
         </scene>
-        <!--Member Controller-->
+        <!--Mitglieder-->
         <scene sceneID="9V5-jc-4U9">
             <objects>
                 <tableViewController id="JAc-hT-hZK" customClass="MemberController" customModule="attendanceCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                             <outlet property="delegate" destination="JAc-hT-hZK" id="dPi-XB-gO6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hPJ-bc-orw"/>
+                    <navigationItem key="navigationItem" title="Mitglieder" id="DkC-8j-gNZ"/>
                     <connections>
                         <outlet property="memberTableView" destination="SJ3-QK-Knv" id="9Xz-3O-VyU"/>
                     </connections>
