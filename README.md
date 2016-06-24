@@ -3,6 +3,15 @@ Simple iOS swift application for educational purpose
 
 ### Overview
 The app provides the possibility to log and monitor the member attendances for various events.
+- reads data from API
+- click on event to see and edit the attendances of the members
+    - click multiple times on status button to switch between different states
+- refresh data by pulling down the table view
+- delete items by swiping from right to left
+- views for adding new elements
+
+### Screenshots
+
 
 ### Installation
 - clone project from github
@@ -30,7 +39,7 @@ GET/PUT/DEL - /periods/[id]/
     "name": "Saison 16/17"
 }]
 ```
-#### events
+#### Events
 ```
 GET         - /events/
 GET/PUT/DEL - /events/[id]/
