@@ -27,7 +27,7 @@ class EventTypeSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'name', 'abbr')
 
 class EventSerializer(serializers.HyperlinkedModelSerializer):
-    period = PeriodSerializer()
+    period = PeriodSerializer(read_only=True)
     event_type = EventTypeSerializer()
     
     class Meta:
