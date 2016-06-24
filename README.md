@@ -11,7 +11,9 @@ The app provides the possibility to log and monitor the member attendances for v
 - views for adding new elements
 
 ### Screenshots
-
+- [Home screen](home.png)
+- [Attendance screen](attendance.png)
+- [Split View on iPhone 6 Plus](split_view.png)
 
 ### Installation
 - clone project from github
