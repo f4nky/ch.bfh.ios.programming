@@ -44,6 +44,8 @@ class MasterViewController: UITableViewController {
         
         loadAttendanceData()
         
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
+        
         let initialIndexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.eventTableView.selectRowAtIndexPath(initialIndexPath, animated: true, scrollPosition:UITableViewScrollPosition.None)
         
@@ -145,7 +147,7 @@ class MasterViewController: UITableViewController {
         
         cell.lblEventType!.text = event.eventType?.abbr
         cell.lblEventDate!.text = dateFormatter.stringFromDate(event.date!)
-        cell.lblEventInfo!.text = event.desc
+        cell.lblEventInfo!.text = event.description
         
         return cell
     }

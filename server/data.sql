@@ -23,10 +23,10 @@ INSERT INTO api_member (id, first_name, last_name, birth_date, member_type_id) V
 	(3, 'Jane', 'Doe', '2002-09-01', 2),
 	(4, 'Alice', 'Scott', '2001-12-12', 2);
 
-INSERT INTO api_event (id, date, period_id, event_type_id) VALUES
-	(1, '2016-06-20', 1, 1),
-	(2, '2016-06-24', 1, 1),
-	(3, '2016-06-27', 1, 1);
+INSERT INTO api_event (id, date, period_id, event_type_id, description) VALUES
+	(1, '2016-06-20', 1, 1, '18.20-20.00, Musterhalle, Thun'),
+	(2, '2016-06-24', 1, 1, '18.20-20.00, Musterhalle, Thun'),
+	(3, '2016-06-27', 1, 1, '18.20-20.00, Musterhalle, Thun');
 
 INSERT INTO api_attendance (id, event_id, member_id, status) VALUES
 	(1, 1, 1, null),

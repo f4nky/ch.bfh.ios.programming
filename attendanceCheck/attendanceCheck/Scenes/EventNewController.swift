@@ -13,14 +13,9 @@ class EventNewController: UITableViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet var eventTableView: UITableView!
     @IBOutlet weak var eventDatePicker: UIDatePicker!
     @IBOutlet weak var eventTypePicker: UIPickerView!
+    @IBOutlet weak var txtEventDesc: UITextField!
     
-    @IBAction func cancelToList(segue: UIStoryboardSegue) {
-        print("cancel")
-    }
-    @IBAction func saveEvent(segue: UIStoryboardSegue) {
-        print("save")
-    }
-    
+    var event: Event?
     var eventTypes = [EventType]()
     
     override func viewDidLoad() {
@@ -36,20 +31,24 @@ class EventNewController: UITableViewController, UIPickerViewDataSource, UIPicke
         eventTypePicker.dataSource = self
         
         loadEventTypeData()
+        
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
     }
     
     func loadEventTypeData() {
         EventTypeApi.getEventTypes() {eventTypes in
             self.eventTypes = eventTypes
-            /*dispatch_async(dispatch_get_main_queue()) {
-                self.eventTypePicker.reloadData()
-            }*/
+            dispatch_async(dispatch_get_main_queue()) {
+                self.eventTypePicker.reloadAllComponents()
+            }
         }
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.separatorInset = UIEdgeInsetsZero
-        cell.layoutMargins = UIEdgeInsetsZero
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (indexPath.section == 0 || indexPath.section == 1) {
+            return 100
+        }
+        return self.tableView.rowHeight
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -62,5 +61,14 @@ class EventNewController: UITableViewController, UIPickerViewDataSource, UIPicke
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return eventTypes[row].name
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "saveEventDetails" {
+            let eventDate = eventDatePicker.date
+            let eventType = eventTypes[eventTypePicker.selectedRowInComponent(0)]
+            let eventDesc = txtEventDesc.text
+            event = Event(id: nil, date: eventDate, description: eventDesc, eventType: eventType)
+        }
     }
 }

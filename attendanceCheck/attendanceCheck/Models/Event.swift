@@ -9,34 +9,40 @@
 import Foundation
 
 class Event {
+    var id: Int?
     var date: NSDate?
-    var desc: String?
+    var description: String?
     var eventType: EventType?
     
-    init(date: NSDate, desc: String?, eventType: EventType?) {
+    init(id: Int?, date: NSDate, description: String?, eventType: EventType?) {
+        self.id = id
         self.date = date
-        self.desc = desc
+        self.description = description
         self.eventType = eventType
     }
     
-    init(date: String?, desc: String?, eventType: EventType?) {
+    init(id: Int?, date: String?, description: String?, eventType: EventType?) {
+        self.id = id
         if let tmpDate = date {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             self.date = dateFormatter.dateFromString(tmpDate)!
         }
-        self.desc = desc
+        self.description = description
         self.eventType = eventType
     }
     
     init(eventData: [String: AnyObject]) {
+        if let id = eventData["id"] as? Int {
+            self.id = id
+        }
         if let date = eventData["date"] as? String {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             self.date = dateFormatter.dateFromString(date)!
         }
-        if let desc = eventData["desc"] as? String {
-            self.desc = desc
+        if let description = eventData["description"] as? String {
+            self.description = description
         }
         if let eventTypeData = eventData["event_type"] as? [String: AnyObject] {
             let eventType = EventType(eventTypeData: eventTypeData)

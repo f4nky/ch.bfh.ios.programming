@@ -41,6 +41,7 @@
 		B5FCC1711D1C8E410019D22A /* MemberNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1701D1C8E410019D22A /* MemberNewController.swift */; };
 		B5FCC1741D1C8EB20019D22A /* EventNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1731D1C8EB20019D22A /* EventNewController.swift */; };
 		B5FCC1761D1C91D10019D22A /* EventTypeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */; };
+		B5FCC1781D1D6A2C0019D22A /* MemberTypeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCC1771D1D6A2C0019D22A /* MemberTypeApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		B5FCC1701D1C8E410019D22A /* MemberNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberNewController.swift; path = Scenes/MemberNewController.swift; sourceTree = "<group>"; };
 		B5FCC1731D1C8EB20019D22A /* EventNewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventNewController.swift; path = Scenes/EventNewController.swift; sourceTree = "<group>"; };
 		B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeApi.swift; sourceTree = "<group>"; };
+		B5FCC1771D1D6A2C0019D22A /* MemberTypeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTypeApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +131,10 @@
 			children = (
 				B5FCC1681D1C87680019D22A /* AttendanceApi.swift */,
 				B5FCC1691D1C87680019D22A /* EventApi.swift */,
-				B5FCC16A1D1C87680019D22A /* MemberApi.swift */,
-				B5FCC16B1D1C87680019D22A /* RestManager.swift */,
 				B5FCC1751D1C91D10019D22A /* EventTypeApi.swift */,
+				B5FCC16A1D1C87680019D22A /* MemberApi.swift */,
+				B5FCC1771D1D6A2C0019D22A /* MemberTypeApi.swift */,
+				B5FCC16B1D1C87680019D22A /* RestManager.swift */,
 			);
 			name = Webservice;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				B5FCC1641D1C875D0019D22A /* AttendanceMemberController.swift in Sources */,
 				B5FCC1451D1C86B10019D22A /* MemberType.swift in Sources */,
 				B5FCC1431D1C86B10019D22A /* EventType.swift in Sources */,
+				B5FCC1781D1D6A2C0019D22A /* MemberTypeApi.swift in Sources */,
 				B5FCC1711D1C8E410019D22A /* MemberNewController.swift in Sources */,
 				B5E54D531CAB1CE200E00F8C /* AppDelegate.swift in Sources */,
 				B5FCC1561D1C874A0019D22A /* MemberCell.swift in Sources */,

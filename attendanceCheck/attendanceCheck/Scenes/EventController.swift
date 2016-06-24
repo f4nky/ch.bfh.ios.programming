@@ -12,6 +12,18 @@ class EventController: UITableViewController {
 
     @IBOutlet var eventTableView: UITableView!
     
+    @IBAction func cancelToList(segue: UIStoryboardSegue) {
+        
+    }
+    @IBAction func saveEvent(segue: UIStoryboardSegue) {
+        if let eventDetailsController = segue.sourceViewController as? EventNewController {
+            if let event = eventDetailsController.event {
+                EventApi.saveEvent(event) {_ in}
+                loadEventData()
+            }
+        }
+    }
+    
     var events = [Event]()
     
     override func viewDidLoad() {
@@ -49,6 +61,11 @@ class EventController: UITableViewController {
             }
         }
     }
+    
+    func deleteEvent(id: Int) {
+        EventApi.deleteEvent(id) {_ in}
+        loadEventData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,9 +97,20 @@ class EventController: UITableViewController {
         cell.accessoryType = UITableViewCellAccessoryType.None
         cell.lblEventType!.text = event.eventType?.abbr
         cell.lblEventDate!.text = dateFormatter.stringFromDate(event.date!)
-        cell.lblEventInfo!.text = event.desc
+        cell.lblEventInfo!.text = event.description
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            let event = events[indexPath.row]
+            deleteEvent(event.id!)
+        }
     }
 
 }

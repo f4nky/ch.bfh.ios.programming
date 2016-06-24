@@ -31,6 +31,7 @@ class RestManager: NSURLSessionDataTask {
         
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) in
+            print(data)
             let responseObject: AnyObject?
             if let tmpData = data {
                 responseObject = try! NSJSONSerialization.JSONObjectWithData(tmpData, options: [])

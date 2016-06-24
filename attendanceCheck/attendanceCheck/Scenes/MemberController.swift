@@ -10,8 +10,19 @@ import UIKit
 
 class MemberController: UITableViewController {
 
-    
     @IBOutlet var memberTableView: UITableView!
+
+    @IBAction func cancelToList(segue: UIStoryboardSegue) {
+        
+    }
+    @IBAction func saveMember(segue: UIStoryboardSegue) {
+        if let memberDetailsController = segue.sourceViewController as? MemberNewController {
+            if let member = memberDetailsController.member {
+                MemberApi.saveMember(member) {_ in}
+                loadMemberData()
+            }
+        }
+    }
     
     var sections = [String]()
     var members = [[Member]]()
@@ -109,8 +120,6 @@ class MemberController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("memberCell", forIndexPath: indexPath) as! MemberCell
-        
-        
         
         let member = members[indexPath.section][indexPath.row]
         

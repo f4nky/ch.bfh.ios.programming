@@ -15,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = UIColor(red: 0/255, green: 125/255, blue: 130/255, alpha: 1)
+        navigationBarAppearance.barTintColor = UIColor(red: 0/255, green: 125/255, blue: 130/255, alpha: 1)
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.tintColor = UIColor(red: 0/255, green: 125/255, blue: 130/255, alpha: 1)
+        
         return true
     }
 

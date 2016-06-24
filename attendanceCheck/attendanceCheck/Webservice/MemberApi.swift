@@ -22,4 +22,11 @@ class MemberApi {
             completion(members)
         }
     }
+    
+    static func saveMember(member: Member, completion: () -> Void) {
+        RestManager.performRequest("members/", method: "POST", body: member) {
+            (data, response, error) in
+            completion()
+        }
+    }
 }

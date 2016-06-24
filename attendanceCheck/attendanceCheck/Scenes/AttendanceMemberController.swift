@@ -107,20 +107,39 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func changeStatusBtnStyle(btn: UIButton, newStatus: String?) {
+        var img: UIImage?
+        var bgColor: UIColor?
+        var tintColor: UIColor?
+        
         if let status = newStatus {
             switch status {
             case "ANW":
-                btn.backgroundColor = UIColor.greenColor()
+                bgColor = UIColor(red: 30/255, green: 160/255, blue: 100/255, alpha: 1)
+                tintColor = UIColor(red: 40/255, green: 100/255, blue: 80/255, alpha: 1)
+                img = UIImage(named: "check.png")
             case "ENT":
-                btn.backgroundColor = UIColor.orangeColor()
+                bgColor = UIColor(red: 255/255, green: 210/255, blue: 90/255, alpha: 1)
+                tintColor = UIColor(red: 205/255, green: 140/255, blue: 80/255, alpha: 1)
+                img = UIImage(named: "times.png")
             case "UNE":
-                btn.backgroundColor = UIColor.redColor()
+                bgColor = UIColor(red: 210/255, green: 75/255, blue: 65/255, alpha: 1)
+                tintColor = UIColor(red: 145/255, green: 55/255, blue: 45/255, alpha: 1)
+                img = UIImage(named: "times.png")
             default:
-                btn.backgroundColor = UIColor.clearColor()
+                bgColor = UIColor.clearColor()
+                tintColor = UIColor(red: 115/255, green: 115/255, blue: 120/255, alpha: 1)
+                img = UIImage(named: "question.png")
             }
         } else {
-            btn.backgroundColor = UIColor.clearColor()
+            bgColor = UIColor.clearColor()
+            tintColor = UIColor(red: 115/255, green: 115/255, blue: 120/255, alpha: 1)
+            img = UIImage(named: "question.png")
         }
+        
+        let tintedImg = img!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        btn.setImage(tintedImg, forState: .Normal)
+        btn.backgroundColor = bgColor
+        btn.tintColor = tintColor
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

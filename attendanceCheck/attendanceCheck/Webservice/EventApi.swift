@@ -22,4 +22,18 @@ class EventApi {
             completion(events)
         }
     }
+    
+    static func saveEvent(event: Event, completion: () -> Void) {
+        RestManager.performRequest("events/", method: "POST", body: event) {
+            (data, response, error) in
+            completion()
+        }
+    }
+    
+    static func deleteEvent(id: Int, completion: () -> Void) {
+        RestManager.performRequest("events/" + String(id) + "/", method: "DELETE", body: nil) {
+            (data, response, error) in
+            completion()
+        }
+    }
 }

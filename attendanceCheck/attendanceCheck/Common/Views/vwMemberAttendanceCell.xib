@@ -27,14 +27,13 @@
                             <constraint firstAttribute="width" secondItem="9yT-R8-9pF" secondAttribute="height" multiplier="1:1" id="fkd-BO-Jb6"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNK-F4-GQQ">
-                        <rect key="frame" x="253" y="5" width="60" height="40"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNK-F4-GQQ">
+                        <rect key="frame" x="267" y="9" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KOe-u1-CkQ"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="XCK-eF-PWe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                        <state key="normal" title="?">
+                        <state key="normal" image="question">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
@@ -76,6 +75,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="question" width="32" height="32"/>
         <image name="user" width="626" height="626"/>
     </resources>
 </document>
