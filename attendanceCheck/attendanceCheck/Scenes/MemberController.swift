@@ -86,6 +86,13 @@ class MemberController: UITableViewController {
             }
         }
     }
+    
+    func deleteMember(id: Int) {
+        MemberApi.deleteMember(id) {_ in}
+        self.sections = [String]()
+        self.members = [[Member]]()
+        loadMemberData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -129,5 +136,12 @@ class MemberController: UITableViewController {
         cell.lblMemberName.text = member.firstName!.uppercaseString + " " + member.lastName!.uppercaseString
         cell.lblBirthDate.text = dateFormatter.stringFromDate(member.birthDate!)
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            let member = members[indexPath.section][indexPath.row]
+            deleteMember(member.id!)
+        }
     }
 }

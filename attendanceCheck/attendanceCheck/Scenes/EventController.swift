@@ -110,6 +110,7 @@ class EventController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             let event = events[indexPath.row]
             deleteEvent(event.id!)
+            loadEventData()
         }
     }
 

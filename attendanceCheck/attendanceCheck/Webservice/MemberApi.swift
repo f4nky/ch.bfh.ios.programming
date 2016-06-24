@@ -29,4 +29,11 @@ class MemberApi {
             completion()
         }
     }
+    
+    static func deleteMember(id: Int, completion: () -> Void) {
+        RestManager.performRequest("members/" + String(id) + "/", method: "DELETE", body: nil) {
+            (data, response, error) in
+            completion()
+        }
+    }
 }
